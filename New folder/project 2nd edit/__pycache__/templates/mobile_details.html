@@ -1,0 +1,4541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../static/images/circle-cropped.png">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="../templates/mustache.js"></script>
+	<title>Mobile/Details</title>
+	<style id="applicationStylesheet" type="text/css">
+		.mediaViewInfo {
+			--web-view-name: mobile_details;
+			--web-view-id: mobile_details;
+			--web-scale-on-resize: true;
+			--web-enable-deep-linking: true;
+		}
+
+		:root {
+			--web-view-ids: mobile_details;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			border: none;
+		}
+
+		#mobile_details {
+			position: absolute;
+			width: 1366px;
+			height: 2509px;
+			background-color: rgba(255, 255, 255, 1);
+			overflow: hidden;
+			--web-view-name: mobile_details;
+			--web-view-id: mobile_details;
+			--web-scale-on-resize: true;
+			--web-enable-deep-linking: true;
+		}
+
+		@keyframes fadein {
+
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+
+		}
+
+		.Rectangle_38 {
+			position: absolute;
+			overflow: visible;
+			width: 1088px;
+			height: 185px;
+			left: 139px;
+			top: 1378px;
+		}
+
+		.Rectangle_35 {
+			position: absolute;
+			overflow: visible;
+			width: 1088px;
+			height: 185px;
+			left: 139px;
+			top: 799px;
+		}
+
+		#navbar {
+			position: absolute;
+			width: 1366px;
+			height: 113px;
+			left: 0px;
+			top: -7px;
+			overflow: visible;
+		}
+
+		.Rectangle_1 {
+			position: absolute;
+			overflow: visible;
+			width: 1366px;
+			height: 80px;
+			left: 0px;
+			top: 7px;
+		}
+
+
+		#Group_649 {
+			position: absolute;
+			width: 168px;
+			height: 41px;
+			left: 1059px;
+			top: 27px;
+			overflow: visible;
+			--web-animation: fadein 0.3s ease-out;
+			--web-action-type: page;
+			--web-action-target: login.html;
+			cursor: pointer;
+		}
+
+		.Rectangle_2 {
+			filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+			position: absolute;
+			overflow: visible;
+			width: 186px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#log_in___sign_up {
+			position: absolute;
+			left: 10px;
+			top: 9px;
+			overflow: visible;
+			width: 140px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Arial Rounded MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 20px;
+			color: rgba(0, 0, 0, 1);
+		}
+
+		#home {
+			position: absolute;
+			left: 501px;
+			top: 32px;
+			overflow: visible;
+			width: 72px;
+			white-space: nowrap;
+			--web-animation: fadein 0.3s ease-out;
+			--web-action-type: page;
+			--web-action-target: Home.html;
+			cursor: pointer;
+			text-align: left;
+			font-family: Arial Rounded MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 25px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#Icon_feather_search {
+			position: absolute;
+			width: 27px;
+			height: 27px;
+			left: 1002.305px;
+			top: 34.06px;
+			overflow: visible;
+		}
+
+		.Path_1 {
+			overflow: visible;
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			left: 0px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_2 {
+			overflow: visible;
+			position: absolute;
+			width: 12.182px;
+			height: 12.182px;
+			left: 20.475px;
+			top: 20.475px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#service {
+			position: absolute;
+			left: 591px;
+			top: 32px;
+			overflow: visible;
+			width: 94px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Arial Rounded MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 25px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#about {
+			position: absolute;
+			left: 705px;
+			top: 32px;
+			overflow: visible;
+			width: 74px;
+			white-space: nowrap;
+			--web-animation: fadein 0.3s ease-out;
+			--web-action-type: page;
+			--web-action-target: about_us_.html;
+			cursor: pointer;
+			text-align: left;
+			font-family: Arial Rounded MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 25px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#blog {
+			position: absolute;
+			left: 800px;
+			top: 32px;
+			overflow: visible;
+			width: 56px;
+			white-space: nowrap;
+			--web-animation: fadein 0.3s ease-out;
+			--web-action-type: page;
+			--web-action-target: Blog.html;
+			cursor: pointer;
+			text-align: left;
+			font-family: Arial Rounded MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 25px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#contact {
+			position: absolute;
+			left: 875px;
+			top: 32px;
+			overflow: visible;
+			width: 98px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Arial Rounded MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 25px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#ID97958673_239643010467976_610 {
+			position: absolute;
+			width: 83px;
+			height: 113px;
+			left: 139px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		.Rectangle_36 {
+			position: absolute;
+			overflow: visible;
+			width: 1088px;
+			height: 185px;
+			left: 139px;
+			top: 992px;
+		}
+
+		.Rectangle_37 {
+			position: absolute;
+			overflow: visible;
+			width: 1088px;
+			height: 185px;
+			left: 139px;
+			top: 1185px;
+		}
+
+		#Group_9 {
+			position: absolute;
+			width: 75px;
+			height: 83.214px;
+			left: 184px;
+			top: 1429px;
+			overflow: visible;
+		}
+
+		.Icon_metro_display {
+			overflow: visible;
+			position: absolute;
+			width: 75px;
+			height: 83.214px;
+			left: 0px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_material_fullscreen_exit {
+			overflow: visible;
+			position: absolute;
+			width: 25.101px;
+			height: 24.603px;
+			left: 25.399px;
+			top: 18.302px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#Processor {
+			position: absolute;
+			left: 333px;
+			top: 874px;
+			overflow: visible;
+			width: 142px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#HiSilicon_Kirin_980_Octa_Core_ {
+			position: absolute;
+			left: 599px;
+			top: 852px;
+			overflow: visible;
+			width: 485px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			color: rgba(112, 112, 112, 1);
+		}
+
+		#Storage___RAM {
+			position: absolute;
+			left: 334px;
+			top: 1050px;
+			overflow: visible;
+			width: 141px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#ID256_GB__8_GB_RAM {
+			position: absolute;
+			left: 598px;
+			top: 1065px;
+			overflow: visible;
+			width: 245px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			color: rgba(112, 112, 112, 1);
+		}
+
+		#Camera {
+			position: absolute;
+			left: 334px;
+			top: 1260px;
+			overflow: visible;
+			width: 112px;
+			white-space: nowrap;
+			line-height: 45px;
+			margin-top: -7.5px;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#Quad_background_48___16___8___ {
+			position: absolute;
+			left: 599px;
+			top: 1235px;
+			overflow: visible;
+			width: 515px;
+			white-space: nowrap;
+			line-height: 45px;
+			margin-top: -7.5px;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			color: rgba(112, 112, 112, 1);
+		}
+
+		#ID6_26_inch_FHD___display_with {
+			position: absolute;
+			left: 599px;
+			top: 1451px;
+			overflow: visible;
+			width: 548px;
+			white-space: nowrap;
+			line-height: 45px;
+			margin-top: -7.5px;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			color: rgba(112, 112, 112, 1);
+		}
+
+		#Screen {
+			position: absolute;
+			left: 332px;
+			top: 1453px;
+			overflow: visible;
+			width: 100px;
+			white-space: nowrap;
+			line-height: 45px;
+			margin-top: -7.5px;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		.Rectangle_45 {
+			position: absolute;
+			overflow: visible;
+			width: 1088px;
+			height: 185px;
+			left: 139px;
+			top: 1571px;
+		}
+
+		.Rectangle_46 {
+			position: absolute;
+			overflow: visible;
+			width: 1088px;
+			height: 185px;
+			left: 139px;
+			top: 1764px;
+		}
+
+		#Operating__system {
+			position: absolute;
+			left: 332px;
+			top: 1629px;
+			overflow: visible;
+			width: 151px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#Android_9_0 {
+			position: absolute;
+			left: 599px;
+			top: 1644px;
+			overflow: visible;
+			width: 155px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			color: rgba(112, 112, 112, 1);
+		}
+
+		#Battery {
+			position: absolute;
+			left: 333px;
+			top: 1839px;
+			overflow: visible;
+			width: 105px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#ID4000_mAh {
+			position: absolute;
+			left: 599px;
+			top: 1837px;
+			overflow: visible;
+			width: 136px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			color: rgba(112, 112, 112, 1);
+		}
+
+		#Honor_20_Pro_1 {
+			position: absolute;
+			width: 383px;
+			height: 485px;
+			left: 139px;
+			top: 173px;
+			overflow: visible;
+		}
+
+		#Group_603 {
+			position: absolute;
+			width: 1088px;
+			height: 61px;
+			left: 138px;
+			top: 728px;
+			overflow: visible;
+		}
+
+		.Line_6 {
+			overflow: visible;
+			position: absolute;
+			width: 1088px;
+			height: 2px;
+			left: 0px;
+			top: 61px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#Group_599 {
+			position: absolute;
+			width: 168px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		.Rectangle_33 {
+			position: absolute;
+			overflow: visible;
+			width: 168px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#details {
+			position: absolute;
+			left: 26px;
+			top: 11px;
+			overflow: visible;
+			width: 118px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#Group_600 {
+			position: absolute;
+			width: 168px;
+			height: 60px;
+			left: 183px;
+			top: 0px;
+			overflow: visible;
+			--web-animation: fadein 0.3s ease-out;
+			--web-action-type: page;
+			--web-action-target: mobile_gallery.html;
+			cursor: pointer;
+		}
+
+		.Rectangle_56 {
+			/*filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));*/
+			position: absolute;
+			overflow: visible;
+			width: 186px;
+			height: 78px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#gallery {
+			position: absolute;
+			left: 24px;
+			top: 10px;
+			overflow: visible;
+			width: 122px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(0, 85, 151, 1);
+		}
+
+		#Group_601 {
+			position: absolute;
+			width: 168px;
+			height: 60px;
+			left: 366px;
+			top: 0px;
+			overflow: visible;
+			--web-animation: fadein 0.3s ease-out;
+			--web-action-type: page;
+			--web-action-target: mobile_reviews.html;
+			cursor: pointer;
+		}
+
+		.Rectangle_57 {
+			position: absolute;
+			overflow: visible;
+			width: 168px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#reviews {
+			position: absolute;
+			left: 15px;
+			top: 10px;
+			overflow: visible;
+			width: 139px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(0, 85, 151, 1);
+		}
+
+		#Group_602 {
+			position: absolute;
+			width: 168px;
+			height: 60px;
+			left: 549px;
+			top: 0px;
+			overflow: visible;
+			--web-animation: fadein 0.3s ease-out;
+			--web-action-type: page;
+			--web-action-target: mobile_buy_now.html;
+			cursor: pointer;
+		}
+
+		.Rectangle_60 {
+			position: absolute;
+			overflow: visible;
+			width: 168px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#buy_now {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			overflow: visible;
+			width: 150px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(0, 85, 151, 1);
+		}
+
+		#footer {
+			position: absolute;
+			width: 1370.001px;
+			height: 358.444px;
+			left: -4.002px;
+			top: 2173px;
+			overflow: visible;
+		}
+
+		#footer1 {
+			position: absolute;
+			width: 1370.001px;
+			height: 358.444px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		.Icon_awesome_cheese {
+			overflow: visible;
+			position: absolute;
+			width: 1370.001px;
+			height: 358.444px;
+			left: 0px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#sitemap {
+			position: absolute;
+			left: 141.889px;
+			top: 78.21px;
+			overflow: visible;
+			width: 129px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#product {
+			position: absolute;
+			left: 325.889px;
+			top: 78.21px;
+			overflow: visible;
+			width: 145px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#hELP {
+			position: absolute;
+			left: 509.889px;
+			top: 78.21px;
+			overflow: visible;
+			width: 69px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#subscribe {
+			position: absolute;
+			left: 827.889px;
+			top: 78.21px;
+			overflow: visible;
+			width: 167px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#Group_51 {
+			position: absolute;
+			width: 260px;
+			height: 60px;
+			left: 827.889px;
+			top: 148.21px;
+			overflow: visible;
+		}
+
+		#Group_53 {
+			position: absolute;
+			width: 260px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		.Rectangle_32 {
+			position: absolute;
+			overflow: visible;
+			width: 260px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#Group_52 {
+			position: absolute;
+			width: 193px;
+			height: 30px;
+			left: 11px;
+			top: 15px;
+			overflow: visible;
+		}
+
+		#Enter_your_mail___ {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+			width: 194px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 25px;
+			color: rgba(212, 206, 206, 1);
+		}
+
+		#About_us {
+			position: absolute;
+			left: 141.889px;
+			top: 128.21px;
+			overflow: visible;
+			width: 117px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#Services {
+			position: absolute;
+			left: 141.889px;
+			top: 164.21px;
+			overflow: visible;
+			width: 107px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#blog_x {
+			position: absolute;
+			left: 141.889px;
+			top: 200.21px;
+			overflow: visible;
+			width: 59px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#ID457754ae_9e1f_41b0_be9a_8dec {
+			position: absolute;
+			width: 210px;
+			height: 77px;
+			left: 119px;
+			top: 1px;
+			overflow: visible;
+		}
+
+		#contact_us {
+			position: absolute;
+			left: 141.889px;
+			top: 236.21px;
+			overflow: visible;
+			width: 139px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#newest {
+			position: absolute;
+			left: 325.889px;
+			top: 128.21px;
+			overflow: visible;
+			width: 97px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#features {
+			position: absolute;
+			left: 325.889px;
+			top: 164.21px;
+			overflow: visible;
+			width: 109px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#customers {
+			position: absolute;
+			left: 325.889px;
+			top: 200.21px;
+			overflow: visible;
+			width: 137px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#feedback {
+			position: absolute;
+			left: 325.889px;
+			top: 236.21px;
+			overflow: visible;
+			width: 125px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#getting_started {
+			position: absolute;
+			left: 509.889px;
+			top: 128.21px;
+			overflow: visible;
+			width: 190px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#FAQ {
+			position: absolute;
+			left: 509.889px;
+			top: 164.21px;
+			overflow: visible;
+			width: 53px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#How_it_work {
+			position: absolute;
+			left: 509.889px;
+			top: 200.21px;
+			overflow: visible;
+			width: 152px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 27px;
+			color: rgba(209, 204, 204, 1);
+		}
+
+		#Group_648 {
+			position: absolute;
+			width: 130px;
+			height: 60px;
+			left: 1099.889px;
+			top: 147.21px;
+			overflow: visible;
+		}
+
+		.Rectangle_60_ {
+			position: absolute;
+			overflow: visible;
+			width: 130px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#send {
+			position: absolute;
+			left: 35px;
+			top: 15px;
+			overflow: visible;
+			width: 62px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 25px;
+			color: rgba(42, 39, 39, 1);
+		}
+
+		#icons8_twitter_circled_48 {
+			position: absolute;
+			width: 48px;
+			height: 48px;
+			left: 943.889px;
+			top: 219.21px;
+			overflow: visible;
+		}
+
+		#icons8_facebook_48 {
+			position: absolute;
+			width: 48px;
+			height: 48px;
+			left: 885.889px;
+			top: 219.21px;
+			overflow: visible;
+		}
+
+		#icons8_linkedin_circled_48 {
+			position: absolute;
+			width: 48px;
+			height: 48px;
+			left: 827.889px;
+			top: 219.21px;
+			overflow: visible;
+		}
+
+		#Icon_feather_cpu {
+			position: absolute;
+			width: 65px;
+			height: 65px;
+			left: 189px;
+			top: 859px;
+			overflow: visible;
+		}
+
+		.Path_47 {
+			overflow: visible;
+			position: absolute;
+			width: 59px;
+			height: 59px;
+			left: 4.5px;
+			top: 4.5px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_48 {
+			overflow: visible;
+			position: absolute;
+			width: 23px;
+			height: 23px;
+			left: 23px;
+			top: 23px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_49 {
+			overflow: visible;
+			position: absolute;
+			width: 3px;
+			height: 7.5px;
+			left: 23.636px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_50 {
+			overflow: visible;
+			position: absolute;
+			width: 3px;
+			height: 7.5px;
+			left: 41.364px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_51 {
+			overflow: visible;
+			position: absolute;
+			width: 3px;
+			height: 7.5px;
+			left: 23.636px;
+			top: 60.5px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_52 {
+			overflow: visible;
+			position: absolute;
+			width: 3px;
+			height: 7.5px;
+			left: 41.364px;
+			top: 60.5px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_53 {
+			overflow: visible;
+			position: absolute;
+			width: 7.5px;
+			height: 3px;
+			left: 60.5px;
+			top: 23.636px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_54 {
+			overflow: visible;
+			position: absolute;
+			width: 7.5px;
+			height: 3px;
+			left: 60.5px;
+			top: 38.409px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_55 {
+			overflow: visible;
+			position: absolute;
+			width: 7.5px;
+			height: 3px;
+			left: 0px;
+			top: 23.636px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_56 {
+			overflow: visible;
+			position: absolute;
+			width: 7.5px;
+			height: 3px;
+			left: 0px;
+			top: 38.409px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_awesome_microchip {
+			overflow: visible;
+			position: absolute;
+			width: 60px;
+			height: 75px;
+			transform: matrix(1, 0, 0, 1, 191.5, 1045.8574) rotate(-90deg);
+			transform-origin: center;
+			left: 0px;
+			top: 0px;
+		}
+
+		#Icon_ionic_ios_camera {
+			position: absolute;
+			width: 75px;
+			height: 60px;
+			left: 184px;
+			top: 1248px;
+			overflow: visible;
+		}
+
+		.Path_25 {
+			overflow: visible;
+			position: absolute;
+			width: 27.091px;
+			height: 27.091px;
+			left: 23.955px;
+			top: 20.069px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_26 {
+			overflow: visible;
+			position: absolute;
+			width: 75px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_ionic_md_battery_charging {
+			overflow: visible;
+			position: absolute;
+			width: 35.542px;
+			height: 66.948px;
+			left: 204.184px;
+			top: 1823px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_material_settings {
+			overflow: visible;
+			position: absolute;
+			width: 35px;
+			height: 35px;
+			left: 186px;
+			top: 1643px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_material_settings_bat {
+			overflow: visible;
+			position: absolute;
+			width: 31px;
+			height: 31px;
+			left: 221px;
+			top: 1626px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_material_settings_bau {
+			overflow: visible;
+			position: absolute;
+			width: 31px;
+			height: 31px;
+			left: 222px;
+			top: 1665px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#Group_300 {
+			position: absolute;
+			width: 262px;
+			height: 36.004px;
+			left: 563px;
+			top: 250px;
+			overflow: visible;
+		}
+
+		#Group_5 {
+			position: absolute;
+			width: 218.257px;
+			height: 36.004px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		.Icon_awesome_star {
+			overflow: visible;
+			position: absolute;
+			width: 37.617px;
+			height: 36.004px;
+			left: 0px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_awesome_star_bay {
+			overflow: visible;
+			position: absolute;
+			width: 37.617px;
+			height: 36.004px;
+			left: 45.141px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_awesome_star_baz {
+			overflow: visible;
+			position: absolute;
+			width: 37.617px;
+			height: 36.004px;
+			left: 90.281px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_awesome_star_ba {
+			overflow: visible;
+			position: absolute;
+			width: 37.617px;
+			height: 36.004px;
+			left: 135.422px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Icon_awesome_star_half_alt {
+			overflow: visible;
+			position: absolute;
+			width: 37.688px;
+			height: 36px;
+			left: 180.569px;
+			top: 0.002px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#ID4_3 {
+			position: absolute;
+			left: 224px;
+			top: 0px;
+			overflow: visible;
+			width: 39px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			color: rgba(112, 112, 112, 1);
+		}
+
+		#Honor_20_Pro {
+			position: absolute;
+			left: 563px;
+			top: 182px;
+			overflow: visible;
+			width: 248px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 40px;
+			color: rgba(0, 85, 151, 1);
+		}
+
+		#Capture_wonder_with_HONOR_20_P {
+			position: absolute;
+			left: 561px;
+			top: 297px;
+			overflow: visible;
+			width: 617px;
+			white-space: nowrap;
+			line-height: 37px;
+			margin-top: -3.5px;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(112, 112, 112, 1);
+		}
+
+		.Icon_ionic_md_battery_charging_ba {
+			overflow: visible;
+			position: absolute;
+			width: 39.816px;
+			height: 75px;
+			left: 898.009px;
+			top: 482px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#BATTERY {
+			position: absolute;
+			left: 891px;
+			top: 438px;
+			overflow: visible;
+			width: 155px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#ID4000__mAH {
+			position: absolute;
+			left: 956px;
+			top: 474px;
+			overflow: visible;
+			width: 86px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: SF Text;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 35px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#RAM {
+			position: absolute;
+			left: 729px;
+			top: 438px;
+			overflow: visible;
+			width: 78px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#ID8_GB {
+			position: absolute;
+			left: 826px;
+			top: 474px;
+			overflow: visible;
+			width: 45px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: SF Text;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 35px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		.Icon_awesome_microchip_bba {
+			overflow: visible;
+			position: absolute;
+			width: 60px;
+			height: 75px;
+			transform: matrix(1, 0, 0, 1, 736.6406, 483.8575) rotate(-90deg);
+			transform-origin: center;
+			left: 0px;
+			top: 0px;
+		}
+
+		#storage {
+			position: absolute;
+			left: 1064px;
+			top: 438px;
+			overflow: visible;
+			width: 133px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#ID128_GB {
+			position: absolute;
+			left: 1157px;
+			top: 482px;
+			overflow: visible;
+			width: 58px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: SF Text;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 35px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		.Icon_material_sd_storage {
+			overflow: visible;
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			left: 1076px;
+			top: 490.775px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#CAMIRA {
+			position: absolute;
+			left: 560px;
+			top: 438px;
+			overflow: visible;
+			width: 135px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#ID42_MP {
+			position: absolute;
+			left: 654px;
+			top: 474px;
+			overflow: visible;
+			width: 52px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: SF Text;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 35px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		#Icon_ionic_ios_camera_bbg {
+			position: absolute;
+			width: 75px;
+			height: 60px;
+			left: 560px;
+			top: 491px;
+			overflow: visible;
+		}
+
+		.Path_25_bbh {
+			overflow: visible;
+			position: absolute;
+			width: 27.091px;
+			height: 27.091px;
+			left: 23.954px;
+			top: 20.069px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		.Path_26_bbi {
+			overflow: visible;
+			position: absolute;
+			width: 75px;
+			height: 60px;
+			left: 0px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#Group_301 {
+			position: absolute;
+			width: 236px;
+			height: 41px;
+			left: 560px;
+			top: 591px;
+			overflow: visible;
+		}
+
+		#color__ {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+			width: 108px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Segoe UI;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 35px;
+			color: rgba(84, 84, 84, 1);
+		}
+
+		.Ellipse_4 {
+			position: absolute;
+			overflow: visible;
+			width: 35px;
+			height: 35px;
+			left: 111px;
+			top: 3px;
+		}
+
+		.Ellipse_5 {
+			position: absolute;
+			overflow: visible;
+			width: 35px;
+			height: 35px;
+			left: 156px;
+			top: 3px;
+		}
+
+		.Ellipse_6 {
+			position: absolute;
+			overflow: visible;
+			width: 35px;
+			height: 35px;
+			left: 201px;
+			top: 3px;
+		}
+
+		.wrapper {
+			position: absolute;
+			left: 985px;
+			top: 1px;
+		}
+
+		.searchbox {
+			position: relative;
+		}
+
+		.searchbox .input {
+			width: 0px;
+			border: 0px;
+			height: 75px;
+			padding: 0px 35px;
+			border-radius: 40px;
+			outline: none;
+			color: #040503;
+			font-weight: bold;
+			font-size: 24px;
+			transition: all 0.5s linear;
+		}
+
+		.searchbtn {
+			position: absolute;
+			top: 0;
+			right: -1.8px;
+			background: rgb(0, 85, 151);
+			width: 75px;
+			height: 75px;
+			border-radius: 40%;
+			cursor: pointer;
+			transition: all 0.5s 0.6s linear;
+		}
+
+		.searchbtn .fas {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #ffffff;
+			font-size: 22px;
+			transition: all 0.5s 0.6s linear;
+		}
+
+		.searchbox .input.active-width {
+			width: 275px;
+		}
+	</style>
+	<script id="applicationScript">
+		///////////////////////////////////////
+		// INITIALIZATION
+		///////////////////////////////////////
+
+		/**
+		 * Functionality for scaling, showing by media query, and navigation between multiple pages on a single page. 
+		 * Code subject to change.
+		 **/
+		$(document).ready(function () {
+			$(".searchbtn").click(function () {
+				$(".input").focus().toggleClass("active-width");
+			})
+		})
+
+		if (window.console == null) {
+			window["console"] = {
+				log: function () { }
+			}
+		}; // some browsers do not set console
+
+		var Application = function () {
+			// event constants
+			this.NAVIGATION_CHANGE = "viewChange";
+			this.VIEW_NOT_FOUND = "viewNotFound";
+			this.VIEW_CHANGE = "viewChange";
+			this.STATE_NOT_FOUND = "stateNotFound";
+			this.APPLICATION_COMPLETE = "applicationComplete";
+			this.APPLICATION_RESIZE = "applicationResize";
+			this.SIZE_STATE_NAME = "data-is-view-scaled";
+
+			this.lastView = null;
+			this.lastState = null;
+			this.lastOverlay = null;
+			this.currentView = null;
+			this.currentState = null;
+			this.currentOverlay = null;
+			this.currentQuery = {
+				index: 0,
+				rule: null,
+				mediaText: null,
+				id: null
+			};
+			this.inclusionQuery = "(min-width: 0px)";
+			this.exclusionQuery = "none and (min-width: 99999px)";
+			this.LastModifiedDateLabelName = "LastModifiedDateLabel";
+			this.viewScaleSliderId = "ViewScaleSliderInput";
+			this.pageRefreshedName = "showPageRefreshedNotification";
+			this.prefix = "--web-";
+			this.applicationStylesheet = null;
+			this.mediaQueryDictionary = {};
+			this.viewsDictionary = {};
+			this.addedViews = [];
+			this.views = {};
+			this.viewIds = [];
+			this.viewIds = [];
+			this.viewQueries = {};
+			this.overlays = {};
+			this.overlayIds = [];
+			this.numberOfViews = 0;
+			this.verticalPadding = 0;
+			this.horizontalPadding = 0;
+			this.stateName = null;
+			this.viewScale = 1;
+			this.viewLeft = 0;
+			this.viewTop = 0;
+
+			// view settings
+			this.showUpdateNotification = false;
+			this.showNavigationControls = false;
+			this.scaleViewsToFit = false;
+			this.scaleToFitOnDoubleClick = false;
+			this.actualSizeOnDoubleClick = false;
+			this.scaleViewsOnResize = false;
+			this.navigationOnKeypress = false;
+			this.showViewName = false;
+			this.enableDeepLinking = true;
+			this.refreshPageForChanges = false;
+			this.showRefreshNotifications = true;
+
+			// view controls
+			this.scaleViewSlider = null;
+			this.lastModifiedLabel = null;
+			this.supportsPopState = false; // window.history.pushState!=null;
+			this.initialized = false;
+
+			// refresh properties
+			this.refreshDuration = 250;
+			this.lastModifiedDate = null;
+			this.refreshRequest = null;
+			this.refreshInterval = null;
+			this.refreshContent = null;
+			this.refreshContentSize = null;
+			this.refreshCheckContent = false;
+			this.refreshCheckContentSize = false;
+
+			var self = this;
+
+			self.initialize = function (event) {
+				var view = self.getVisibleView();
+				if (view == null) view = self.getInitialView();
+				self.collectViews();
+				self.collectOverlays();
+				self.collectMediaQueries();
+				self.setViewOptions(view);
+				self.setViewVariables(view);
+
+				// sometimes the body size is 0 so we call this now and again later
+				if (self.initialized) {
+					window.addEventListener(self.NAVIGATION_CHANGE, self.viewChangeHandler);
+					window.addEventListener("keyup", self.keypressHandler);
+					window.addEventListener("keypress", self.keypressHandler);
+					window.addEventListener("resize", self.resizeHandler);
+					window.document.addEventListener("dblclick", self.doubleClickHandler);
+
+					if (self.supportsPopState) {
+						window.addEventListener('popstate', self.popStateHandler);
+					} else {
+						window.addEventListener('hashchange', self.hashChangeHandler);
+					}
+
+					// we are ready to go
+					window.dispatchEvent(new Event(self.APPLICATION_COMPLETE));
+				}
+
+				if (self.initialized == false) {
+					if (self.showNavigationControls || (self.singlePageApplication && self.showByMediaQuery ==
+						false)) {
+						self.syncronizeViewToURL();
+					}
+
+					if (self.refreshPageForChanges) {
+						self.setupRefreshForChanges();
+					}
+
+					self.initialized = true;
+				}
+
+				if (self.scaleViewsToFit) {
+					self.viewScale = self.scaleViewToFit(view);
+
+					if (self.viewScale < 0) {
+						setTimeout(self.scaleViewToFit, 500, view);
+					}
+				} else if (view) {
+					self.viewScale = self.getViewScaleValue(view);
+					self.centerView(view);
+					self.updateSliderValue(self.viewScale);
+				} else {
+					// no view found
+				}
+
+				if (self.showUpdateNotification) {
+					self.showNotification();
+				}
+
+				//"addEventListener" in window ? null : window.addEventListener = window.attachEvent;
+				//"addEventListener" in document ? null : document.addEventListener = document.attachEvent;
+			}
+
+
+			///////////////////////////////////////
+			// AUTO REFRESH 
+			///////////////////////////////////////
+
+			self.setupRefreshForChanges = function () {
+				self.refreshRequest = new XMLHttpRequest();
+
+				if (!self.refreshRequest) {
+					return false;
+				}
+
+				// get document start values immediately
+				self.requestRefreshUpdate();
+			}
+
+			/**
+			 * Attempt to check the last modified date by the headers 
+			 * or the last modified property from the byte array (experimental)
+			 **/
+			self.requestRefreshUpdate = function () {
+				var url = document.location.href;
+				var protocol = window.location.protocol;
+				var method;
+
+				try {
+
+					if (self.refreshCheckContentSize) {
+						self.refreshRequest.open('HEAD', url, true);
+					} else if (self.refreshCheckContent) {
+						self.refreshContent = document.documentElement.outerHTML;
+						self.refreshRequest.open('GET', url, true);
+						self.refreshRequest.responseType = "text";
+					} else {
+
+						// get page last modified date for the first call to compare to later
+						if (self.lastModifiedDate == null) {
+
+							// File system does not send headers in FF so get blob if possible
+							if (protocol == "file:") {
+								self.refreshRequest.open("GET", url, true);
+								self.refreshRequest.responseType = "blob";
+							} else {
+								self.refreshRequest.open("HEAD", url, true);
+								self.refreshRequest.responseType = "blob";
+							}
+
+							self.refreshRequest.onload = self.refreshOnLoadOnceHandler;
+
+							// In some browsers (Chrome & Safari) this error occurs at send: 
+							// 
+							// Chrome - Access to XMLHttpRequest at 'file:///index.html' from origin 'null' 
+							// has been blocked by CORS policy: 
+							// Cross origin requests are only supported for protocol schemes: 
+							// http, data, chrome, chrome-extension, https.
+							// 
+							// Safari - XMLHttpRequest cannot load file:///Users/user/Public/index.html. Cross origin requests are only supported for HTTP.
+							// 
+							// Solution is to run a local server, set local permissions or test in another browser
+							self.refreshRequest.send(null);
+
+							// In MS browsers the following behavior occurs possibly due to an AJAX call to check last modified date: 
+							// 
+							// DOM7011: The code on this page disabled back and forward caching.
+
+							// In Brave (Chrome) error when on the server
+							// index.js:221 HEAD https://www.example.com/ net::ERR_INSUFFICIENT_RESOURCES
+							// self.refreshRequest.send(null);
+
+						} else {
+							self.refreshRequest = new XMLHttpRequest();
+							self.refreshRequest.onreadystatechange = self.refreshHandler;
+							self.refreshRequest.ontimeout = function () {
+								self.log("Couldn't find page to check for updates");
+							}
+
+							var method;
+							if (protocol == "file:") {
+								method = "GET";
+							} else {
+								method = "HEAD";
+							}
+
+							//refreshRequest.open('HEAD', url, true);
+							self.refreshRequest.open(method, url, true);
+							self.refreshRequest.responseType = "blob";
+							self.refreshRequest.send(null);
+						}
+					}
+				} catch (error) {
+					self.log("Refresh failed for the following reason:")
+					self.log(error);
+				}
+			}
+
+			self.refreshHandler = function () {
+				var contentSize;
+
+				try {
+
+					if (self.refreshRequest.readyState === XMLHttpRequest.DONE) {
+
+						if (self.refreshRequest.status === 2 ||
+							self.refreshRequest.status === 200) {
+							var pageChanged = false;
+
+							self.updateLastModifiedLabel();
+
+							if (self.refreshCheckContentSize) {
+								var lastModifiedHeader = self.refreshRequest.getResponseHeader("Last-Modified");
+								contentSize = self.refreshRequest.getResponseHeader("Content-Length");
+								//lastModifiedDate = refreshRequest.getResponseHeader("Last-Modified");
+								var headers = self.refreshRequest.getAllResponseHeaders();
+								var hasContentHeader = headers.indexOf("Content-Length") != -1;
+
+								if (hasContentHeader) {
+									contentSize = self.refreshRequest.getResponseHeader("Content-Length");
+
+									// size has not been set yet
+									if (self.refreshContentSize == null) {
+										self.refreshContentSize = contentSize;
+										// exit and let interval call this method again
+										return;
+									}
+
+									if (contentSize != self.refreshContentSize) {
+										pageChanged = true;
+									}
+								}
+							} else if (self.refreshCheckContent) {
+
+								if (self.refreshRequest.responseText != self.refreshContent) {
+									pageChanged = true;
+								}
+							} else {
+								lastModifiedHeader = self.getLastModified(self.refreshRequest);
+
+								if (self.lastModifiedDate != lastModifiedHeader) {
+									self.log("lastModifiedDate:" + self.lastModifiedDate + ",lastModifiedHeader:" +
+										lastModifiedHeader);
+									pageChanged = true;
+								}
+
+							}
+
+
+							if (pageChanged) {
+								clearInterval(self.refreshInterval);
+								self.refreshUpdatedPage();
+								return;
+							}
+
+						} else {
+							self.log('There was a problem with the request.');
+						}
+
+					}
+				} catch (error) {
+					//console.log('Caught Exception: ' + error);
+				}
+			}
+
+			self.refreshOnLoadOnceHandler = function (event) {
+
+				// get the last modified date
+				if (self.refreshRequest.response) {
+					self.lastModifiedDate = self.getLastModified(self.refreshRequest);
+
+					if (self.lastModifiedDate != null) {
+
+						if (self.refreshInterval == null) {
+							self.refreshInterval = setInterval(self.requestRefreshUpdate, self.refreshDuration);
+						}
+					} else {
+						self.log("Could not get last modified date from the server");
+					}
+				}
+			}
+
+			self.refreshUpdatedPage = function () {
+				if (self.showRefreshNotifications) {
+					var date = new Date().setTime((new Date().getTime() + 10000));
+					document.cookie = encodeURIComponent(self.pageRefreshedName) + "=true" + "; max-age=6000;" +
+						" path=/";
+				}
+
+				document.location.reload(true);
+			}
+
+			self.showNotification = function (duration) {
+				var notificationID = self.pageRefreshedName + "ID";
+				var notification = document.getElementById(notificationID);
+				if (duration == null) duration = 4000;
+
+				if (notification != null) {
+					return;
+				}
+
+				notification = document.createElement("div");
+				notification.id = notificationID;
+				notification.textContent = "PAGE UPDATED";
+				var styleRule = ""
+				styleRule =
+					"position: fixed; padding: 7px 16px 6px 16px; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; left: 50%;";
+				styleRule +=
+					"top: 20px; background-color: rgba(0,0,0,.5); border-radius: 12px; color:rgb(235, 235, 235); transition: all 2s linear;";
+				styleRule +=
+					"transform: translateX(-50%); letter-spacing: .5px; filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, .1))";
+				notification.setAttribute("style", styleRule);
+
+				notification.className = "PageRefreshedClass";
+
+				document.body.appendChild(notification);
+
+				setTimeout(function () {
+					notification.style.opacity = "0";
+					notification.style.filter = "drop-shadow( 0px 0px 0px rgba(0,0,0, .5))";
+					setTimeout(function () {
+						notification.parentNode.removeChild(notification);
+					}, duration)
+				}, duration);
+
+				document.cookie = encodeURIComponent(self.pageRefreshedName) + "=; max-age=1; path=/";
+			}
+
+			/**
+			 * Get the last modified date from the header 
+			 * or file object after request has been received
+			 **/
+			self.getLastModified = function (request) {
+				var date;
+
+				// file protocol - FILE object with last modified property
+				if (request.response && request.response.lastModified) {
+					date = request.response.lastModified;
+				}
+
+				// http protocol - check headers
+				if (date == null) {
+					date = request.getResponseHeader("Last-Modified");
+				}
+
+				return date;
+			}
+
+			self.updateLastModifiedLabel = function () {
+				var labelValue = "";
+
+				if (self.lastModifiedLabel == null) {
+					self.lastModifiedLabel = document.getElementById("LastModifiedLabel");
+				}
+
+				if (self.lastModifiedLabel) {
+					var seconds = parseInt(((new Date().getTime() - Date.parse(document.lastModified)) / 1000 / 60) *
+						100 + "");
+					var minutes = 0;
+					var hours = 0;
+
+					if (seconds < 60) {
+						seconds = Math.floor(seconds / 10) * 10;
+						labelValue = seconds + " seconds";
+					} else {
+						minutes = parseInt((seconds / 60) + "");
+
+						if (minutes > 60) {
+							hours = parseInt((seconds / 60 / 60) + "");
+							labelValue += hours == 1 ? " hour" : " hours";
+						} else {
+							labelValue = minutes + "";
+							labelValue += minutes == 1 ? " minute" : " minutes";
+						}
+					}
+
+					if (seconds < 10) {
+						labelValue = "Updated now";
+					} else {
+						labelValue = "Updated " + labelValue + " ago";
+					}
+
+					if (self.lastModifiedLabel.firstElementChild) {
+						self.lastModifiedLabel.firstElementChild.textContent = labelValue;
+
+					} else if ("textContent" in self.lastModifiedLabel) {
+						self.lastModifiedLabel.textContent = labelValue;
+					}
+				}
+			}
+
+			self.getShortString = function (string, length) {
+				if (length == null) length = 30;
+				string = string != null ? string.substr(0, length).replace(/\n/g, "") : "[String is null]";
+				return string;
+			}
+
+			self.getShortNumber = function (value, places) {
+				if (places == null || places < 1) places = 4;
+				value = Math.round(value * Math.pow(10, places)) / Math.pow(10, places);
+				return value;
+			}
+
+			///////////////////////////////////////
+			// NAVIGATION CONTROLS
+			///////////////////////////////////////
+
+			self.updateViewLabel = function () {
+				var viewNavigationLabel = document.getElementById("ViewNavigationLabel");
+				var view = self.getVisibleView();
+				var viewIndex = view ? self.getViewIndex(view) : -1;
+				var viewName = view ? self.getViewPreferenceValue(view, self.prefix + "view-name") : null;
+				var viewId = view ? view.id : null;
+
+				if (viewNavigationLabel && view) {
+					if (viewName && viewName.indexOf('"') != -1) {
+						viewName = viewName.replace(/"/g, "");
+					}
+
+					if (self.showViewName) {
+						viewNavigationLabel.textContent = viewName;
+						self.setTooltip(viewNavigationLabel, viewIndex + 1 + " of " + self.numberOfViews);
+					} else {
+						viewNavigationLabel.textContent = viewIndex + 1 + " of " + self.numberOfViews;
+						self.setTooltip(viewNavigationLabel, viewName);
+					}
+
+				}
+			}
+
+			self.updateURL = function (view) {
+				view = view == null ? self.getVisibleView() : view;
+				var viewId = view ? view.id : null
+				var viewFragment = view ? "#" + viewId : null;
+
+				if (viewId && self.viewIds.length > 1 && self.enableDeepLinking) {
+
+					if (self.supportsPopState == false) {
+						self.setFragment(viewId);
+					} else {
+						if (viewFragment != window.location.hash) {
+
+							if (window.location.hash == null) {
+								window.history.replaceState({
+									name: viewId
+								}, null, viewFragment);
+							} else {
+								window.history.pushState({
+									name: viewId
+								}, null, viewFragment);
+							}
+						}
+					}
+				}
+			}
+
+			self.setFragment = function (value) {
+				window.location.hash = "#" + value;
+			}
+
+			self.setTooltip = function (element, value) {
+				// setting the tooltip in edge causes a page crash on hover
+				if (/Edge/.test(navigator.userAgent)) {
+					return;
+				}
+
+				if ("title" in element) {
+					element.title = value;
+				}
+			}
+
+			self.getStylesheetRules = function (styleSheet) {
+				try {
+					if (styleSheet) return styleSheet.cssRules || styleSheet.rules;
+
+					return document.styleSheets[0]["cssRules"] || document.styleSheets[0]["rules"];
+				} catch (error) {
+					// ERRORS:
+					// SecurityError: The operation is insecure.
+					// Errors happen when script loads before stylesheet or loading an external css locally
+
+					// InvalidAccessError: A parameter or an operation is not supported by the underlying object
+					// Place script after stylesheet
+
+					console.log(error);
+					if (error.toString().indexOf("The operation is insecure") != -1) {
+						console.log(
+							"Load the stylesheet before the script or load the stylesheet inline until it can be loaded on a server"
+						)
+					}
+					return [];
+				}
+			}
+
+			/**
+			 * If single page application hide all of the views. 
+			 * @param {Number} selectedIndex if provided shows the view at index provided
+			 **/
+			self.hideViews = function (selectedIndex, animation) {
+				var rules = self.getStylesheetRules();
+				var queryIndex = 0;
+				var numberOfRules = rules != null ? rules.length : 0;
+
+				// loop through rules and hide media queries except selected
+				for (var i = 0; i < numberOfRules; i++) {
+					var rule = rules[i];
+
+					if (rule.media != null) {
+
+						if (queryIndex == selectedIndex) {
+							self.currentQuery.mediaText = rule.conditionText;
+							self.currentQuery.index = selectedIndex;
+							self.currentQuery.rule = rule;
+							self.enableMediaQuery(rule);
+						} else {
+							if (animation) {
+								self.fadeOut(rule)
+							} else {
+								self.disableMediaQuery(rule);
+							}
+						}
+
+						queryIndex++;
+					}
+				}
+
+				self.numberOfViews = queryIndex;
+				self.updateViewLabel();
+				self.updateURL();
+
+				self.dispatchViewChange();
+
+				var view = self.getVisibleView();
+				var viewIndex = view ? self.getViewIndex(view) : -1;
+
+				return viewIndex == selectedIndex ? view : null;
+			}
+
+			/**
+			 * Hide view
+			 * @param {Object} view element to hide
+			 **/
+			self.hideView = function (view) {
+				var rule = view ? self.mediaQueryDictionary[view.id] : null;
+
+				if (rule) {
+					self.disableMediaQuery(rule);
+				}
+			}
+
+			/**
+			 * Hide overlay
+			 * @param {Object} overlay element to hide
+			 **/
+			self.hideOverlay = function (overlay) {
+				var rule = overlay ? self.mediaQueryDictionary[overlay.id] : null;
+
+				if (rule) {
+					self.disableMediaQuery(rule);
+
+					//if (self.showByMediaQuery) {
+					overlay.style.display = "none";
+					//}
+				}
+			}
+
+			/**
+			 * Show the view by media query. Does not hide current views
+			 * Sets view options by default
+			 * @param {Object} view element to show
+			 * @param {Boolean} setViewOptions sets view options if null or true
+			 */
+			self.showViewByMediaQuery = function (view, setViewOptions) {
+				var id = view ? view.id : null;
+				var query = id ? self.mediaQueryDictionary[id] : null;
+				var display = null;
+				setViewOptions = setViewOptions == null ? true : setViewOptions;
+
+				if (query) {
+					self.enableMediaQuery(query);
+					if (view && setViewOptions) self.setViewOptions(view);
+					if (view && setViewOptions) self.setViewVariables(view);
+				}
+			}
+
+			/**
+			 * Show the view. Does not hide current views
+			 */
+			self.showView = function (view, setViewOptions) {
+				var id = view ? view.id : null;
+				var query = id ? self.mediaQueryDictionary[id] : null;
+				var display = null;
+				setViewOptions = setViewOptions == null ? true : setViewOptions;
+
+				if (query) {
+					self.enableMediaQuery(query);
+					if (view == null) view = self.getVisibleView();
+					if (view && setViewOptions) self.setViewOptions(view);
+				} else if (id) {
+					display = window.getComputedStyle(view).getPropertyValue("display");
+					if (display == "" || display == "none") {
+						view.style.display = "block";
+					}
+				}
+
+				if (view) {
+					if (self.currentView != null) {
+						self.lastView = self.currentView;
+					}
+
+					self.currentView = view;
+				}
+			}
+
+			self.showViewById = function (id, setViewOptions) {
+				var view = id ? self.getViewById(id) : null;
+
+				if (view) {
+					self.showView(view);
+					return;
+				}
+
+				self.log("View not found '" + id + "'");
+			}
+
+			/**
+			 * Show overlay over view
+			 * @param {String} id id of view or view reference
+			 * @param {Number} x x location
+			 * @param {Number} y y location
+			 * @param {Event | HTMLElement} event event or html element with styles applied
+			 */
+			self.showOverlay = function (id, x, y, event) {
+				var overlay = id && typeof id === 'string' ? self.getViewById(id) : id ? id : null;
+				var query = overlay ? self.mediaQueryDictionary[overlay.id] : null;
+				var centerHorizontally = false;
+				var centerVertically = false;
+				var display = null;
+
+				// get enter animation - event target must have css variables declared
+				if (event) {
+					var button = event.currentTarget || event; // can be event or htmlelement
+					var buttonComputedStyles = getComputedStyle(button);
+					var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target")
+						.trim();
+					var animation = buttonComputedStyles.getPropertyValue(self.prefix + "animation").trim();
+					var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+					var actionTarget = self.application ? null : self.getElement(actionTargetValue);
+					var actionTargetStyles = actionTarget ? actionTarget.style : null;
+
+					if (actionTargetStyles) {
+						actionTargetStyles.setProperty("animation", animation);
+					}
+
+					if ("stopImmediatePropagation" in event) {
+						event.stopImmediatePropagation();
+					}
+				}
+
+				if (self.application == false || targetType == "page") {
+					document.location.href = "./" + actionTargetValue;
+					return;
+				}
+
+				// remove any current overlays
+				if (self.currentOverlay) {
+					self.removeOverlay();
+				}
+
+				if (query) {
+					//self.setElementAnimation(overlay, null);
+					//overlay.style.animation = animation;
+					self.enableMediaQuery(query);
+
+					var display = overlay && overlay.style.display;
+
+					if (overlay && display == "" || display == "none") {
+						overlay.style.display = "block";
+						self.setViewOptions(overlay);
+					}
+
+					// add animation defined in event target style declaration
+					if (animation && self.supportAnimations) {
+						self.fadeIn(overlay, false, animation);
+					}
+				} else if (id) {
+					if (overlay == null || overlay == false) {
+						self.log("Overlay not found, '" + id + "'");
+						return;
+					}
+
+					display = window.getComputedStyle(overlay).getPropertyValue("display");
+
+					if (display == "" || display == "none") {
+						overlay.style.display = "block";
+					}
+
+					// add animation defined in event target style declaration
+					if (animation && self.supportAnimations) {
+						self.fadeIn(overlay, false, animation);
+					}
+				}
+
+				// do not set x or y position if centering
+				centerHorizontally = self.getViewPreferenceBoolean(overlay, self.prefix + "center-horizontally",
+					false);
+				centerVertically = self.getViewPreferenceBoolean(overlay, self.prefix + "center-vertically", false);
+
+				if (overlay && centerHorizontally == false) {
+					overlay.style.left = x + "px";
+				}
+
+				if (overlay && centerVertically == false) {
+					overlay.style.top = y + "px";
+				}
+
+				self.currentOverlay = overlay;
+			}
+
+			self.goBack = function () {
+				if (self.currentOverlay) {
+					self.removeOverlay();
+				} else if (self.lastView) {
+					self.goToView(self.lastView.id);
+				}
+			}
+
+			self.removeOverlay = function (animate) {
+				var overlay = self.currentOverlay;
+				animate = animate === false ? false : true;
+
+				if (overlay) {
+					var style = overlay.style;
+
+					if (style.animation && self.supportAnimations && animate) {
+						self.reverseAnimation(overlay, true);
+
+						var duration = self.getAnimationDuration(style.animation, true);
+
+						setTimeout(function () {
+							self.setElementAnimation(overlay, null);
+							self.hideOverlay(overlay);
+						}, duration);
+					} else {
+						self.setElementAnimation(overlay, null);
+						self.hideOverlay(overlay);
+					}
+				}
+			}
+
+			/**
+			 * Reverse the animation and hide after
+			 * @param {Object} target element with animation
+			 * @param {Boolean} hide hide after animation ends
+			 */
+			self.reverseAnimation = function (target, hide) {
+				var lastAnimation = null;
+				var style = target.style;
+
+				style.animationPlayState = "paused";
+				lastAnimation = style.animation;
+				style.animation = null;
+				style.animationPlayState = "paused";
+
+				if (hide) {
+					//target.addEventListener("animationend", self.animationEndHideHandler);
+
+					var duration = self.getAnimationDuration(lastAnimation, true);
+					var isOverlay = self.isOverlay(target);
+
+					setTimeout(function () {
+						self.setElementAnimation(target, null);
+
+						if (isOverlay) {
+							self.hideOverlay(target);
+						} else {
+							self.hideView(target);
+						}
+					}, duration);
+				}
+
+				setTimeout(function () {
+					style.animation = lastAnimation;
+					style.animationPlayState = "paused";
+					style.animationDirection = "reverse";
+					style.animationPlayState = "running";
+				}, 30);
+			}
+
+			self.animationEndHandler = function (event) {
+				var target = event.currentTarget;
+				self.dispatchEvent(new Event(event.type));
+			}
+
+			self.isOverlay = function (view) {
+				var result = view ? self.getViewPreferenceBoolean(view, self.prefix + "is-overlay") : false;
+
+				return result;
+			}
+
+			self.animationEndHideHandler = function (event) {
+				var target = event.currentTarget;
+				self.setViewVariables(null, target);
+				self.hideView(target);
+				target.removeEventListener("animationend", self.animationEndHideHandler);
+			}
+
+			self.animationEndShowHandler = function (event) {
+				var target = event.currentTarget;
+				target.removeEventListener("animationend", self.animationEndShowHandler);
+			}
+
+			self.setViewOptions = function (view) {
+
+				if (view) {
+					self.minimumScale = self.getViewPreferenceValue(view, self.prefix + "minimum-scale");
+					self.maximumScale = self.getViewPreferenceValue(view, self.prefix + "maximum-scale");
+					self.scaleViewsToFit = self.getViewPreferenceBoolean(view, self.prefix + "scale-to-fit");
+					self.scaleToFitType = self.getViewPreferenceValue(view, self.prefix + "scale-to-fit-type");
+					self.scaleToFitOnDoubleClick = self.getViewPreferenceBoolean(view, self.prefix +
+						"scale-on-double-click");
+					self.actualSizeOnDoubleClick = self.getViewPreferenceBoolean(view, self.prefix +
+						"actual-size-on-double-click");
+					self.scaleViewsOnResize = self.getViewPreferenceBoolean(view, self.prefix + "scale-on-resize");
+					self.enableScaleUp = self.getViewPreferenceBoolean(view, self.prefix + "enable-scale-up");
+					self.centerHorizontally = self.getViewPreferenceBoolean(view, self.prefix +
+						"center-horizontally");
+					self.centerVertically = self.getViewPreferenceBoolean(view, self.prefix + "center-vertically");
+					self.navigationOnKeypress = self.getViewPreferenceBoolean(view, self.prefix +
+						"navigate-on-keypress");
+					self.showViewName = self.getViewPreferenceBoolean(view, self.prefix + "show-view-name");
+					self.refreshPageForChanges = self.getViewPreferenceBoolean(view, self.prefix +
+						"refresh-for-changes");
+					self.refreshPageForChangesInterval = self.getViewPreferenceValue(view, self.prefix +
+						"refresh-interval");
+					self.showNavigationControls = self.getViewPreferenceBoolean(view, self.prefix +
+						"show-navigation-controls");
+					self.scaleViewSlider = self.getViewPreferenceBoolean(view, self.prefix + "show-scale-controls");
+					self.enableDeepLinking = self.getViewPreferenceBoolean(view, self.prefix + "enable-deep-linking");
+					self.singlePageApplication = self.getViewPreferenceBoolean(view, self.prefix + "application");
+					self.showByMediaQuery = self.getViewPreferenceBoolean(view, self.prefix + "show-by-media-query");
+					self.showUpdateNotification = document.cookie != "" ? document.cookie.indexOf(self
+						.pageRefreshedName) != -1 : false;
+					self.imageComparisonDuration = self.getViewPreferenceValue(view, self.prefix +
+						"image-comparison-duration");
+					self.supportAnimations = self.getViewPreferenceBoolean(view, self.prefix + "enable-animations",
+						true);
+
+					if (self.scaleViewsToFit) {
+						var newScaleValue = self.scaleViewToFit(view);
+
+						if (newScaleValue < 0) {
+							setTimeout(self.scaleViewToFit, 500, view);
+						}
+					} else {
+						self.viewScale = self.getViewScaleValue(view);
+						self.viewToFitWidthScale = self.getViewFitToViewportWidthScale(view, self.enableScaleUp)
+						self.viewToFitHeightScale = self.getViewFitToViewportScale(view, self.enableScaleUp);
+						self.updateSliderValue(self.viewScale);
+					}
+
+					if (self.imageComparisonDuration != null) {
+						// todo
+					}
+
+					if (self.refreshPageForChangesInterval != null) {
+						self.refreshDuration = Number(self.refreshPageForChangesInterval);
+					}
+				}
+			}
+
+			self.previousView = function (event) {
+				var rules = self.getStylesheetRules();
+				var view = self.getVisibleView()
+				var index = view ? self.getViewIndex(view) : -1;
+				var prevQueryIndex = index != -1 ? index - 1 : self.currentQuery.index - 1;
+				var queryIndex = 0;
+				var numberOfRules = rules != null ? rules.length : 0;
+
+				if (event) {
+					event.stopImmediatePropagation();
+				}
+
+				if (prevQueryIndex < 0) {
+					return;
+				}
+
+				// loop through rules and hide media queries except selected
+				for (var i = 0; i < numberOfRules; i++) {
+					var rule = rules[i];
+
+					if (rule.media != null) {
+
+						if (queryIndex == prevQueryIndex) {
+							self.currentQuery.mediaText = rule.conditionText;
+							self.currentQuery.index = prevQueryIndex;
+							self.currentQuery.rule = rule;
+							self.enableMediaQuery(rule);
+							self.updateViewLabel();
+							self.updateURL();
+							self.dispatchViewChange();
+						} else {
+							self.disableMediaQuery(rule);
+						}
+
+						queryIndex++;
+					}
+				}
+			}
+
+			self.nextView = function (event) {
+				var rules = self.getStylesheetRules();
+				var view = self.getVisibleView();
+				var index = view ? self.getViewIndex(view) : -1;
+				var nextQueryIndex = index != -1 ? index + 1 : self.currentQuery.index + 1;
+				var queryIndex = 0;
+				var numberOfRules = rules != null ? rules.length : 0;
+				var numberOfMediaQueries = self.getNumberOfMediaRules();
+
+				if (event) {
+					event.stopImmediatePropagation();
+				}
+
+				if (nextQueryIndex >= numberOfMediaQueries) {
+					return;
+				}
+
+				// loop through rules and hide media queries except selected
+				for (var i = 0; i < numberOfRules; i++) {
+					var rule = rules[i];
+
+					if (rule.media != null) {
+
+						if (queryIndex == nextQueryIndex) {
+							self.currentQuery.mediaText = rule.conditionText;
+							self.currentQuery.index = nextQueryIndex;
+							self.currentQuery.rule = rule;
+							self.enableMediaQuery(rule);
+							self.updateViewLabel();
+							self.updateURL();
+							self.dispatchViewChange();
+						} else {
+							self.disableMediaQuery(rule);
+						}
+
+						queryIndex++;
+					}
+				}
+			}
+
+			/**
+			 * Enables a view via media query
+			 */
+			self.enableMediaQuery = function (rule) {
+
+				try {
+					rule.media.mediaText = self.inclusionQuery;
+				} catch (error) {
+					//self.log(error);
+					rule.conditionText = self.inclusionQuery;
+				}
+			}
+
+			self.disableMediaQuery = function (rule) {
+
+				try {
+					rule.media.mediaText = self.exclusionQuery;
+				} catch (error) {
+					rule.conditionText = self.exclusionQuery;
+				}
+			}
+
+			self.dispatchViewChange = function () {
+				try {
+					var event = new Event(self.NAVIGATION_CHANGE);
+					window.dispatchEvent(event);
+				} catch (error) {
+					// In IE 11: Object doesn't support this action
+				}
+			}
+
+			self.getNumberOfMediaRules = function () {
+				var rules = self.getStylesheetRules();
+				var numberOfRules = rules ? rules.length : 0;
+				var numberOfQueries = 0;
+
+				for (var i = 0; i < numberOfRules; i++) {
+					if (rules[i].media != null) {
+						numberOfQueries++;
+					}
+				}
+
+				return numberOfQueries;
+			}
+
+			/////////////////////////////////////////
+			// VIEW SCALE 
+			/////////////////////////////////////////
+
+			self.sliderChangeHandler = function (event) {
+				var value = self.getShortNumber(event.currentTarget.value / 100);
+				var view = self.getVisibleView();
+				self.setViewScaleValue(view, false, value, true);
+			}
+
+			self.updateSliderValue = function (scale) {
+				var slider = document.getElementById(self.viewScaleSliderId);
+				var tooltip = parseInt(scale * 100 + "") + "%";
+				var inputType;
+				var inputValue;
+
+				if (slider) {
+					inputValue = self.getShortNumber(scale * 100);
+					if (inputValue != slider["value"]) {
+						slider["value"] = inputValue;
+					}
+					inputType = slider.getAttributeNS(null, "type");
+
+					if (inputType != "range") {
+						// input range is not supported
+						slider.style.display = "none";
+					}
+
+					self.setTooltip(slider, tooltip);
+				}
+			}
+
+			self.viewChangeHandler = function (event) {
+				var view = self.getVisibleView();
+				var matrix = view ? getComputedStyle(view).transform : null;
+
+				if (matrix) {
+					self.viewScale = self.getViewScaleValue(view);
+
+					var scaleNeededToFit = self.getViewFitToViewportScale(view);
+					var isViewLargerThanViewport = scaleNeededToFit < 1;
+
+					// scale large view to fit if scale to fit is enabled
+					if (self.scaleViewsToFit) {
+						self.scaleViewToFit(view);
+					} else {
+						self.updateSliderValue(self.viewScale);
+					}
+				}
+			}
+
+			self.getViewScaleValue = function (view) {
+				var matrix = getComputedStyle(view).transform;
+
+				if (matrix) {
+					var matrixArray = matrix.replace("matrix(", "").split(",");
+					var scaleX = parseFloat(matrixArray[0]);
+					var scaleY = parseFloat(matrixArray[3]);
+					var scale = Math.min(scaleX, scaleY);
+				}
+
+				return scale;
+			}
+
+			/**
+			 * Scales view to scale. 
+			 * @param {Object} view view to scale. views are in views array
+			 * @param {Boolean} scaleToFit set to true to scale to fit. set false to use desired scale value
+			 * @param {Number} desiredScale scale to define. not used if scale to fit is false
+			 * @param {Boolean} isSliderChange indicates if slider is callee
+			 */
+			self.setViewScaleValue = function (view, scaleToFit, desiredScale, isSliderChange) {
+				var enableScaleUp = self.enableScaleUp;
+				var scaleToFitType = self.scaleToFitType;
+				var minimumScale = self.minimumScale;
+				var maximumScale = self.maximumScale;
+				var hasMinimumScale = !isNaN(minimumScale) && minimumScale != "";
+				var hasMaximumScale = !isNaN(maximumScale) && maximumScale != "";
+				var scaleNeededToFit = self.getViewFitToViewportScale(view, enableScaleUp);
+				var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, enableScaleUp);
+				var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, enableScaleUp);
+				var scaleToFitFull = self.getViewFitToViewportScale(view, true);
+				var scaleToFitFullWidth = self.getViewFitToViewportWidthScale(view, true);
+				var scaleToFitFullHeight = self.getViewFitToViewportHeightScale(view, true);
+				var scaleToWidth = scaleToFitType == "width";
+				var scaleToHeight = scaleToFitType == "height";
+				var shrunkToFit = false;
+				var topPosition = null;
+				var leftPosition = null;
+				var translateY = null;
+				var translateX = null;
+				var transformValue = "";
+				var canCenterVertically = true;
+				var canCenterHorizontally = true;
+
+				if (scaleToFit && isSliderChange != true) {
+					if (scaleToFitType == "fit" || scaleToFitType == "") {
+						desiredScale = scaleNeededToFit;
+					} else if (scaleToFitType == "width") {
+						desiredScale = scaleNeededToFitWidth;
+					} else if (scaleToFitType == "height") {
+						desiredScale = scaleNeededToFitHeight;
+					}
+				} else {
+					if (isNaN(desiredScale)) {
+						desiredScale = 1;
+					}
+				}
+
+				self.updateSliderValue(desiredScale);
+
+				// scale to fit width
+				if (scaleToWidth && scaleToHeight == false) {
+					canCenterVertically = scaleNeededToFitHeight >= scaleNeededToFitWidth;
+					canCenterHorizontally = scaleNeededToFitWidth >= 1 && enableScaleUp == false;
+
+					if (isSliderChange) {
+						canCenterHorizontally = desiredScale < scaleToFitFullWidth;
+					} else if (scaleToFit) {
+						desiredScale = scaleNeededToFitWidth;
+					}
+
+					if (hasMinimumScale) {
+						desiredScale = Math.max(desiredScale, Number(minimumScale));
+					}
+
+					if (hasMaximumScale) {
+						desiredScale = Math.min(desiredScale, Number(maximumScale));
+					}
+
+					desiredScale = self.getShortNumber(desiredScale);
+
+					canCenterHorizontally = self.canCenterHorizontally(view, "width", enableScaleUp, desiredScale,
+						minimumScale, maximumScale);
+					canCenterVertically = self.canCenterVertically(view, "width", enableScaleUp, desiredScale,
+						minimumScale, maximumScale);
+
+					if (desiredScale > 1 && (enableScaleUp || isSliderChange)) {
+						transformValue = "scale(" + desiredScale + ")";
+					} else if (desiredScale >= 1 && enableScaleUp == false) {
+						transformValue = "scale(" + 1 + ")";
+					} else {
+						transformValue = "scale(" + desiredScale + ")";
+					}
+
+					if (self.centerVertically) {
+						if (canCenterVertically) {
+							translateY = "-50%";
+							topPosition = "50%";
+						} else {
+							translateY = "0";
+							topPosition = "0";
+						}
+
+						if (view.style.top != topPosition) {
+							view.style.top = topPosition + "";
+						}
+
+						if (canCenterVertically) {
+							transformValue += " translateY(" + translateY + ")";
+						}
+					}
+
+					if (self.centerHorizontally) {
+						if (canCenterHorizontally) {
+							translateX = "-50%";
+							leftPosition = "50%";
+						} else {
+							translateX = "0";
+							leftPosition = "0";
+						}
+
+						if (view.style.left != leftPosition) {
+							view.style.left = leftPosition + "";
+						}
+
+						if (canCenterHorizontally) {
+							transformValue += " translateX(" + translateX + ")";
+						}
+					}
+
+					view.style.transformOrigin = "0 0";
+					view.style.transform = transformValue;
+
+					self.viewScale = desiredScale;
+					self.viewToFitWidthScale = scaleNeededToFitWidth;
+					self.viewToFitHeightScale = scaleNeededToFitHeight;
+					self.viewLeft = leftPosition;
+					self.viewTop = topPosition;
+
+					return desiredScale;
+				}
+
+				// scale to fit height
+				if (scaleToHeight && scaleToWidth == false) {
+					//canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+					//canCenterHorizontally = scaleNeededToFitHeight<=scaleNeededToFitWidth && enableScaleUp==false;
+					canCenterVertically = scaleNeededToFitHeight >= scaleNeededToFitWidth;
+					canCenterHorizontally = scaleNeededToFitWidth >= 1 && enableScaleUp == false;
+
+					if (isSliderChange) {
+						canCenterHorizontally = desiredScale < scaleToFitFullHeight;
+					} else if (scaleToFit) {
+						desiredScale = scaleNeededToFitHeight;
+					}
+
+					if (hasMinimumScale) {
+						desiredScale = Math.max(desiredScale, Number(minimumScale));
+					}
+
+					if (hasMaximumScale) {
+						desiredScale = Math.min(desiredScale, Number(maximumScale));
+						//canCenterVertically = desiredScale>=scaleNeededToFitHeight && enableScaleUp==false;
+					}
+
+					desiredScale = self.getShortNumber(desiredScale);
+
+					canCenterHorizontally = self.canCenterHorizontally(view, "height", enableScaleUp, desiredScale,
+						minimumScale, maximumScale);
+					canCenterVertically = self.canCenterVertically(view, "height", enableScaleUp, desiredScale,
+						minimumScale, maximumScale);
+
+					if (desiredScale > 1 && (enableScaleUp || isSliderChange)) {
+						transformValue = "scale(" + desiredScale + ")";
+					} else if (desiredScale >= 1 && enableScaleUp == false) {
+						transformValue = "scale(" + 1 + ")";
+					} else {
+						transformValue = "scale(" + desiredScale + ")";
+					}
+
+					if (self.centerHorizontally) {
+						if (canCenterHorizontally) {
+							translateX = "-50%";
+							leftPosition = "50%";
+						} else {
+							translateX = "0";
+							leftPosition = "0";
+						}
+
+						if (view.style.left != leftPosition) {
+							view.style.left = leftPosition + "";
+						}
+
+						if (canCenterHorizontally) {
+							transformValue += " translateX(" + translateX + ")";
+						}
+					}
+
+					if (self.centerVertically) {
+						if (canCenterVertically) {
+							translateY = "-50%";
+							topPosition = "50%";
+						} else {
+							translateY = "0";
+							topPosition = "0";
+						}
+
+						if (view.style.top != topPosition) {
+							view.style.top = topPosition + "";
+						}
+
+						if (canCenterVertically) {
+							transformValue += " translateY(" + translateY + ")";
+						}
+					}
+
+					view.style.transformOrigin = "0 0";
+					view.style.transform = transformValue;
+
+					self.viewScale = desiredScale;
+					self.viewToFitWidthScale = scaleNeededToFitWidth;
+					self.viewToFitHeightScale = scaleNeededToFitHeight;
+					self.viewLeft = leftPosition;
+					self.viewTop = topPosition;
+
+					return scaleNeededToFitHeight;
+				}
+
+				if (scaleToFitType == "fit") {
+					//canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+					//canCenterHorizontally = scaleNeededToFitWidth>=scaleNeededToFitHeight;
+					canCenterVertically = scaleNeededToFitHeight >= scaleNeededToFit;
+					canCenterHorizontally = scaleNeededToFitWidth >= scaleNeededToFit;
+
+					if (hasMinimumScale) {
+						desiredScale = Math.max(desiredScale, Number(minimumScale));
+					}
+
+					desiredScale = self.getShortNumber(desiredScale);
+
+					if (isSliderChange || scaleToFit == false) {
+						canCenterVertically = scaleToFitFullHeight >= desiredScale;
+						canCenterHorizontally = desiredScale < scaleToFitFullWidth;
+					} else if (scaleToFit) {
+						desiredScale = scaleNeededToFit;
+					}
+
+					transformValue = "scale(" + desiredScale + ")";
+
+					//canCenterHorizontally = self.canCenterHorizontally(view, "fit", false, desiredScale);
+					//canCenterVertically = self.canCenterVertically(view, "fit", false, desiredScale);
+
+					if (self.centerVertically) {
+						if (canCenterVertically) {
+							translateY = "-50%";
+							topPosition = "50%";
+						} else {
+							translateY = "0";
+							topPosition = "0";
+						}
+
+						if (view.style.top != topPosition) {
+							view.style.top = topPosition + "";
+						}
+
+						if (canCenterVertically) {
+							transformValue += " translateY(" + translateY + ")";
+						}
+					}
+
+					if (self.centerHorizontally) {
+						if (canCenterHorizontally) {
+							translateX = "-50%";
+							leftPosition = "50%";
+						} else {
+							translateX = "0";
+							leftPosition = "0";
+						}
+
+						if (view.style.left != leftPosition) {
+							view.style.left = leftPosition + "";
+						}
+
+						if (canCenterHorizontally) {
+							transformValue += " translateX(" + translateX + ")";
+						}
+					}
+
+					view.style.transformOrigin = "0 0";
+					view.style.transform = transformValue;
+
+					self.viewScale = desiredScale;
+					self.viewToFitWidthScale = scaleNeededToFitWidth;
+					self.viewToFitHeightScale = scaleNeededToFitHeight;
+					self.viewLeft = leftPosition;
+					self.viewTop = topPosition;
+
+					self.updateSliderValue(desiredScale);
+
+					return desiredScale;
+				}
+
+				if (scaleToFitType == "default" || scaleToFitType == "") {
+					desiredScale = 1;
+
+					if (hasMinimumScale) {
+						desiredScale = Math.max(desiredScale, Number(minimumScale));
+					}
+					if (hasMaximumScale) {
+						desiredScale = Math.min(desiredScale, Number(maximumScale));
+					}
+
+					canCenterHorizontally = self.canCenterHorizontally(view, "none", false, desiredScale,
+						minimumScale, maximumScale);
+					canCenterVertically = self.canCenterVertically(view, "none", false, desiredScale, minimumScale,
+						maximumScale);
+
+					if (self.centerVertically) {
+						if (canCenterVertically) {
+							translateY = "-50%";
+							topPosition = "50%";
+						} else {
+							translateY = "0";
+							topPosition = "0";
+						}
+
+						if (view.style.top != topPosition) {
+							view.style.top = topPosition + "";
+						}
+
+						if (canCenterVertically) {
+							transformValue += " translateY(" + translateY + ")";
+						}
+					}
+
+					if (self.centerHorizontally) {
+						if (canCenterHorizontally) {
+							translateX = "-50%";
+							leftPosition = "50%";
+						} else {
+							translateX = "0";
+							leftPosition = "0";
+						}
+
+						if (view.style.left != leftPosition) {
+							view.style.left = leftPosition + "";
+						}
+
+						if (canCenterHorizontally) {
+							transformValue += " translateX(" + translateX + ")";
+						} else {
+							transformValue += " translateX(" + 0 + ")";
+						}
+					}
+
+					view.style.transformOrigin = "0 0";
+					view.style.transform = transformValue;
+
+
+					self.viewScale = desiredScale;
+					self.viewToFitWidthScale = scaleNeededToFitWidth;
+					self.viewToFitHeightScale = scaleNeededToFitHeight;
+					self.viewLeft = leftPosition;
+					self.viewTop = topPosition;
+
+					self.updateSliderValue(desiredScale);
+
+					return desiredScale;
+				}
+			}
+
+			/**
+			 * Returns true if view can be centered horizontally
+			 * @param {HTMLElement} view view
+			 * @param {String} type type of scaling - width, height, all, none
+			 * @param {Boolean} scaleUp if scale up enabled 
+			 * @param {Number} scale target scale value 
+			 */
+			self.canCenterHorizontally = function (view, type, scaleUp, scale, minimumScale, maximumScale) {
+				var scaleNeededToFit = self.getViewFitToViewportScale(view, scaleUp);
+				var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, scaleUp);
+				var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, scaleUp);
+				var canCenter = false;
+				var minScale;
+
+				type = type == null ? "none" : type;
+				scale = scale == null ? scale : scaleNeededToFitWidth;
+				scaleUp = scaleUp == null ? false : scaleUp;
+
+				if (type == "width") {
+
+					if (scaleUp && maximumScale == null) {
+						canCenter = false;
+					} else if (scaleNeededToFitWidth >= 1) {
+						canCenter = true;
+					}
+				} else if (type == "height") {
+					minScale = Math.min(1, scaleNeededToFitHeight);
+					if (minimumScale != "" && maximumScale != "") {
+						minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFitHeight));
+					} else {
+						if (minimumScale != "") {
+							minScale = Math.max(minimumScale, scaleNeededToFitHeight);
+						}
+						if (maximumScale != "") {
+							minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFitHeight));
+						}
+					}
+
+					if (scaleUp && maximumScale == "") {
+						canCenter = false;
+					} else if (scaleNeededToFitWidth >= minScale) {
+						canCenter = true;
+					}
+				} else if (type == "fit") {
+					canCenter = scaleNeededToFitWidth >= scaleNeededToFit;
+				} else {
+					if (scaleUp) {
+						canCenter = false;
+					} else if (scaleNeededToFitWidth >= 1) {
+						canCenter = true;
+					}
+				}
+
+				self.horizontalScrollbarsNeeded = canCenter;
+
+				return canCenter;
+			}
+
+			/**
+			 * Returns true if view can be centered horizontally
+			 * @param {HTMLElement} view view to scale
+			 * @param {String} type type of scaling
+			 * @param {Boolean} scaleUp if scale up enabled 
+			 * @param {Number} scale target scale value 
+			 */
+			self.canCenterVertically = function (view, type, scaleUp, scale, minimumScale, maximumScale) {
+				var scaleNeededToFit = self.getViewFitToViewportScale(view, scaleUp);
+				var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, scaleUp);
+				var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, scaleUp);
+				var canCenter = false;
+				var minScale;
+
+				type = type == null ? "none" : type;
+				scale = scale == null ? 1 : scale;
+				scaleUp = scaleUp == null ? false : scaleUp;
+
+				if (type == "width") {
+					canCenter = scaleNeededToFitHeight >= scaleNeededToFitWidth;
+				} else if (type == "height") {
+					minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFit));
+					canCenter = scaleNeededToFitHeight >= minScale;
+				} else if (type == "fit") {
+					canCenter = scaleNeededToFitHeight >= scaleNeededToFit;
+				} else {
+					if (scaleUp) {
+						canCenter = false;
+					} else if (scaleNeededToFitHeight >= 1) {
+						canCenter = true;
+					}
+				}
+
+				self.verticalScrollbarsNeeded = canCenter;
+
+				return canCenter;
+			}
+
+			self.getViewFitToViewportScale = function (view, scaleUp) {
+				var enableScaleUp = scaleUp;
+				var availableWidth = window.innerWidth || document.documentElement.clientWidth || document.body
+					.clientWidth;
+				var availableHeight = window.innerHeight || document.documentElement.clientHeight || document.body
+					.clientHeight;
+				var elementWidth = parseFloat(getComputedStyle(view, "style").width);
+				var elementHeight = parseFloat(getComputedStyle(view, "style").height);
+				var newScale = 1;
+
+				// if element is not added to the document computed values are NaN
+				if (isNaN(elementWidth) || isNaN(elementHeight)) {
+					return newScale;
+				}
+
+				availableWidth -= self.horizontalPadding;
+				availableHeight -= self.verticalPadding;
+
+				if (enableScaleUp) {
+					newScale = Math.min(availableHeight / elementHeight, availableWidth / elementWidth);
+				} else if (elementWidth > availableWidth || elementHeight > availableHeight) {
+					newScale = Math.min(availableHeight / elementHeight, availableWidth / elementWidth);
+				}
+
+				return newScale;
+			}
+
+			self.getViewFitToViewportWidthScale = function (view, scaleUp) {
+				// need to get browser viewport width when element
+				var isParentWindow = view && view.parentNode && view.parentNode === document.body;
+				var enableScaleUp = scaleUp;
+				var availableWidth = window.innerWidth || document.documentElement.clientWidth || document.body
+					.clientWidth;
+				var elementWidth = parseFloat(getComputedStyle(view, "style").width);
+				var newScale = 1;
+
+				// if element is not added to the document computed values are NaN
+				if (isNaN(elementWidth)) {
+					return newScale;
+				}
+
+				availableWidth -= self.horizontalPadding;
+
+				if (enableScaleUp) {
+					newScale = availableWidth / elementWidth;
+				} else if (elementWidth > availableWidth) {
+					newScale = availableWidth / elementWidth;
+				}
+
+				return newScale;
+			}
+
+			self.getViewFitToViewportHeightScale = function (view, scaleUp) {
+				var enableScaleUp = scaleUp;
+				var availableHeight = window.innerHeight || document.documentElement.clientHeight || document.body
+					.clientHeight;
+				var elementHeight = parseFloat(getComputedStyle(view, "style").height);
+				var newScale = 1;
+
+				// if element is not added to the document computed values are NaN
+				if (isNaN(elementHeight)) {
+					return newScale;
+				}
+
+				availableHeight -= self.verticalPadding;
+
+				if (enableScaleUp) {
+					newScale = availableHeight / elementHeight;
+				} else if (elementHeight > availableHeight) {
+					newScale = availableHeight / elementHeight;
+				}
+
+				return newScale;
+			}
+
+			self.keypressHandler = function (event) {
+				var rightKey = 39;
+				var leftKey = 37;
+
+				// listen for both events 
+				if (event.type == "keypress") {
+					window.removeEventListener("keyup", self.keypressHandler);
+				} else {
+					window.removeEventListener("keypress", self.keypressHandler);
+				}
+
+				if (self.showNavigationControls) {
+					if (self.navigationOnKeypress) {
+						if (event.keyCode == rightKey) {
+							self.nextView();
+						}
+						if (event.keyCode == leftKey) {
+							self.previousView();
+						}
+					}
+				} else if (self.navigationOnKeypress) {
+					if (event.keyCode == rightKey) {
+						self.nextView();
+					}
+					if (event.keyCode == leftKey) {
+						self.previousView();
+					}
+				}
+			}
+
+			///////////////////////////////////
+			// GENERAL FUNCTIONS
+			///////////////////////////////////
+
+			self.getViewById = function (id) {
+				id = id ? id.replace("#", "") : "";
+				var view = self.viewIds.indexOf(id) != -1 && self.getElement(id);
+				return view;
+			}
+
+			self.getViewIds = function () {
+				var viewIds = self.getViewPreferenceValue(document.body, self.prefix + "view-ids");
+				var viewId = null;
+
+				viewIds = viewIds != null && viewIds != "" ? viewIds.split(",") : [];
+
+				if (viewIds.length == 0) {
+					viewId = self.getViewPreferenceValue(document.body, self.prefix + "view-id");
+					viewIds = viewId ? [viewId] : [];
+				}
+
+				return viewIds;
+			}
+
+			self.getInitialViewId = function () {
+				var viewId = self.getViewPreferenceValue(document.body, self.prefix + "view-id");
+				return viewId;
+			}
+
+			self.getApplicationStylesheet = function () {
+				var stylesheetId = self.getViewPreferenceValue(document.body, self.prefix + "stylesheet-id");
+				self.applicationStylesheet = document.getElementById("applicationStylesheet");
+				return self.applicationStylesheet.sheet;
+			}
+
+			self.getVisibleView = function () {
+				var viewIds = self.getViewIds();
+
+				for (var i = 0; i < viewIds.length; i++) {
+					var viewId = viewIds[i].replace(/[\#?\.?](.*)/, "$" + "1");
+					var view = self.getElement(viewId);
+					var postName = "_Class";
+
+					if (view == null && viewId && viewId.lastIndexOf(postName) != -1) {
+						view = self.getElement(viewId.replace(postName, ""));
+					}
+
+					if (view) {
+						var display = getComputedStyle(view).display;
+
+						if (display == "block" || display == "flex") {
+							return view;
+						}
+					}
+				}
+
+				return null;
+			}
+
+			self.getInitialView = function () {
+				var viewId = self.getInitialViewId();
+				viewId = viewId.replace(/[\#?\.?](.*)/, "$" + "1");
+				var view = self.getElement(viewId);
+				var postName = "_Class";
+
+				if (view == null && viewId && viewId.lastIndexOf(postName) != -1) {
+					view = self.getElement(viewId.replace(postName, ""));
+				}
+
+				return view;
+			}
+
+			self.getViewIndex = function (view) {
+				var viewIds = self.getViewIds();
+				var id = view ? view.id : null;
+				var index = id && viewIds ? viewIds.indexOf(id) : -1;
+
+				return index;
+			}
+
+			self.syncronizeViewToURL = function () {
+				var fragment = window.location.hash;
+				var view = self.getViewById(fragment);
+				var index = view ? self.getViewIndex(view) : 0;
+				if (index == -1) index = 0;
+				var currentView = self.hideViews(index);
+
+				if (self.supportsPopState && currentView) {
+
+					if (fragment == null) {
+						window.history.replaceState({
+							name: currentView.id
+						}, null, "#" + currentView.id);
+					} else {
+						window.history.pushState({
+							name: currentView.id
+						}, null, "#" + currentView.id);
+					}
+				}
+
+				self.setViewVariables(view);
+				return view;
+			}
+
+			/**
+			 * Set the currentView or currentOverlay properties and set the lastView or lastOverlay properties
+			 */
+			self.setViewVariables = function (view, overlay, parentView) {
+				if (view) {
+					if (self.currentView) {
+						self.lastView = self.currentView;
+					}
+					self.currentView = view;
+				}
+
+				if (overlay) {
+					if (self.currentOverlay) {
+						self.lastOverlay = self.currentOverlay;
+					}
+					self.currentOverlay = overlay;
+				}
+			}
+
+			self.getViewPreferenceBoolean = function (view, property, altValue) {
+				var computedStyle = window.getComputedStyle(view);
+				var value = computedStyle.getPropertyValue(property);
+				var type = typeof value;
+
+				if (value == "true" || (type == "string" && value.indexOf("true") != -1)) {
+					return true;
+				} else if (value == "" && arguments.length == 3) {
+					return altValue;
+				}
+
+				return false;
+			}
+
+			self.getViewPreferenceValue = function (view, property, defaultValue) {
+				var value = window.getComputedStyle(view).getPropertyValue(property);
+
+				if (value === undefined) {
+					return defaultValue;
+				}
+
+				value = value.replace(/^[\s\"]*/, "");
+				value = value.replace(/[\s\"]*$/, "");
+				value = value.replace(/^[\s"]*(.*?)[\s"]*$/, function (match, capture) {
+					return capture;
+				});
+
+				return value;
+			}
+
+			self.getStyleRuleValue = function (cssRule, property) {
+				var value = cssRule ? cssRule.style.getPropertyValue(property) : null;
+
+				if (value === undefined) {
+					return null;
+				}
+
+				value = value.replace(/^[\s\"]*/, "");
+				value = value.replace(/[\s\"]*$/, "");
+				value = value.replace(/^[\s"]*(.*?)[\s"]*$/, function (match, capture) {
+					return capture;
+				});
+
+				return value;
+			}
+
+			self.getCSSPropertyValueForElement = function (id, property) {
+				var styleSheets = document.styleSheets;
+				var numOfStylesheets = styleSheets.length;
+				var values = [];
+				var selectorIDText = "#" + id;
+				var selectorClassText = "." + id + "_Class";
+				var value;
+
+				for (var i = 0; i < numOfStylesheets; i++) {
+					var styleSheet = styleSheets[i];
+					var cssRules = self.getStylesheetRules(styleSheet);
+					var numOfCSSRules = cssRules.length;
+					var cssRule;
+
+					for (var j = 0; j < numOfCSSRules; j++) {
+						cssRule = cssRules[j];
+
+						if (cssRule.media) {
+							var mediaRules = cssRule.cssRules;
+							var numOfMediaRules = mediaRules ? mediaRules.length : 0;
+
+							for (var k = 0; k < numOfMediaRules; k++) {
+								var mediaRule = mediaRules[k];
+
+								if (mediaRule.selectorText == selectorIDText || mediaRule.selectorText ==
+									selectorClassText) {
+
+									if (mediaRule.style && property in mediaRule.style) {
+										value = mediaRule.style.getPropertyValue(property);
+										values.push(value);
+									}
+								}
+							}
+						} else {
+
+							if (cssRule.selectorText == selectorIDText || cssRule.selectorText == selectorClassText) {
+								if (cssRule.style && property in cssRule.style) {
+									value = cssRule.style.getPropertyValue(property);
+									values.push(value);
+								}
+							}
+						}
+					}
+				}
+
+				return values.pop();
+			}
+
+			self.collectViews = function () {
+				var viewIds = self.getViewIds();
+
+				for (let index = 0; index < viewIds.length; index++) {
+					const id = viewIds[index];
+					const view = self.getViewById(id);
+					//view && view.addEventListener("animationend", self.animationEndHandler);
+					self.views[id] = view;
+				}
+
+				self.viewIds = viewIds;
+			}
+
+			self.collectOverlays = function () {
+				var viewIds = self.getViewIds();
+				var ids = [];
+
+				for (let index = 0; index < viewIds.length; index++) {
+					const id = viewIds[index];
+					const view = self.getViewById(id);
+					const isOverlay = view && self.isOverlay(view);
+
+					if (isOverlay) {
+						ids.push(id);
+						self.overlays[id] = view;
+					}
+				}
+
+				self.overlayIds = ids;
+			}
+
+			self.collectMediaQueries = function () {
+				var viewIds = self.getViewIds();
+				var styleSheet = self.getApplicationStylesheet();
+				var cssRules = self.getStylesheetRules(styleSheet);
+				var numOfCSSRules = cssRules ? cssRules.length : 0;
+				var cssRule;
+				var id = viewIds.length ? viewIds[0] : ""; // single view
+				var selectorIDText = "#" + id;
+				var selectorClassText = "." + id + "_Class";
+				var viewsNotFound = viewIds.slice();
+				var viewsFound = [];
+				var selectorText = null;
+				var property = self.prefix + "view-id";
+
+				for (var j = 0; j < numOfCSSRules; j++) {
+					cssRule = cssRules[j];
+
+					if (cssRule.media) {
+						var mediaRules = cssRule.cssRules;
+						var numOfMediaRules = mediaRules ? mediaRules.length : 0;
+
+						for (var k = 0; k < numOfMediaRules; k++) {
+							var mediaRule = mediaRules[k];
+							var mediaId = null;
+
+							selectorText = mediaRule.selectorText;
+
+							if (selectorText == ".mediaViewInfo") {
+
+								mediaId = self.getStyleRuleValue(mediaRule, property);
+
+								self.addView(mediaId, cssRule);
+								viewsFound.push(mediaId);
+
+								if (viewsNotFound.indexOf(mediaId) != -1) {
+									viewsNotFound.splice(viewsNotFound.indexOf(mediaId));
+								}
+
+								break;
+							}
+						}
+					} else {
+						selectorText = cssRule.selectorText.replace(/[#|\s|*]?/g, "");
+
+						if (viewIds.indexOf(selectorText) != -1) {
+							self.addView(selectorText, cssRule);
+
+							if (viewsNotFound.indexOf(selectorText) != -1) {
+								viewsNotFound.splice(viewsNotFound.indexOf(selectorText));
+							}
+
+							break;
+						}
+					}
+				}
+
+				if (viewsNotFound.length) {
+					console.log("Could not find the following views:" + viewsNotFound.join(",") + "");
+					console.log("Views found:" + viewsFound.join(",") + "");
+				}
+			}
+
+			/**
+			 * Adds a view. A view object contains the id of the view and the style rule
+			 * Use enableMediaQuery(rule) to enable
+			 * An array of view names are in self.views array
+			 */
+			self.addView = function (name, cssRule, parentId) {
+				var state = {
+					name: name,
+					rule: cssRule,
+					id: name,
+					parentId: parentId
+				};
+				self.addedViews.push(name);
+				self.viewsDictionary[name] = state;
+				self.mediaQueryDictionary[name] = cssRule;
+			}
+
+			self.hasView = function (name) {
+
+				if (self.addedViews.indexOf(name) != -1) {
+					return true;
+				}
+				return false;
+			}
+
+			/**
+			 * Go to view by id. Views are added in addView()
+			 * @param {String} name id of view in current
+			 * @param {String} parent id of parent view
+			 * @param {Boolean} maintainPreviousState if true then do not hide other views
+			 */
+			self.goToView = function (name, maintainPreviousState, parent) {
+				var state = self.viewsDictionary[name];
+
+				if (state) {
+					if (maintainPreviousState == false || maintainPreviousState == null) {
+						self.hideViews();
+					}
+					self.enableMediaQuery(state.rule);
+					self.updateViewLabel();
+					self.updateURL();
+				} else {
+					var event = new Event(self.STATE_NOT_FOUND);
+					self.stateName = name;
+					window.dispatchEvent(event);
+				}
+			}
+
+			/**
+			 * Go to the view in the event targets CSS variable
+			 */
+			self.goToTargetView = function (event) {
+				var button = event.currentTarget;
+				var buttonComputedStyles = getComputedStyle(button);
+				var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+				var animation = buttonComputedStyles.getPropertyValue(self.prefix + "animation").trim();
+				var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+				var targetView = self.application ? null : self.getElement(actionTargetValue);
+				var actionTargetStyles = targetView ? targetView.style : null;
+				var state = self.viewsDictionary[actionTargetValue];
+
+				// navigate to page
+				if (self.application == false || targetType == "page") {
+					document.location.href = "./" + actionTargetValue;
+					return;
+				}
+
+				// if view is found
+				if (targetView) {
+
+					if (self.currentOverlay) {
+						self.removeOverlay(false);
+					}
+
+					// add animation set in event target style declaration
+					if (animation && self.supportAnimations) {
+						self.crossFade(self.currentView, targetView, false, animation);
+					} else {
+						self.setViewVariables(self.currentView);
+						self.hideViews();
+						self.enableMediaQuery(state.rule);
+						self.scaleViewIfNeeded(targetView);
+						self.centerView(targetView);
+						self.updateViewLabel();
+						self.updateURL();
+					}
+				} else {
+					var stateEvent = new Event(self.STATE_NOT_FOUND);
+					self.stateName = name;
+					window.dispatchEvent(stateEvent);
+				}
+
+				event.stopImmediatePropagation();
+			}
+
+			/**
+			 * Cross fade between views
+			 **/
+			self.crossFade = function (from, to, update, animation) {
+				var targetIndex = to.parentNode
+				var fromIndex = Array.prototype.slice.call(from.parentElement.children).indexOf(from);
+				var toIndex = Array.prototype.slice.call(to.parentElement.children).indexOf(to);
+
+				if (from.parentNode == to.parentNode) {
+					var reverse = self.getReverseAnimation(animation);
+					var duration = self.getAnimationDuration(animation, true);
+
+					// if target view is above (higher index)
+					// then fade in target view 
+					// and after fade in then hide previous view instantly
+					if (fromIndex < toIndex) {
+						self.setElementAnimation(from, null);
+						self.setElementAnimation(to, null);
+						self.showViewByMediaQuery(to);
+						self.fadeIn(to, update, animation);
+
+						setTimeout(function () {
+							self.setElementAnimation(to, null);
+							self.setElementAnimation(from, null);
+							self.hideView(from);
+							self.updateURL();
+							self.setViewVariables(to);
+							self.updateViewLabel();
+						}, duration)
+					}
+					// if target view is on bottom
+					// then show target view instantly 
+					// and fade out current view
+					else if (fromIndex > toIndex) {
+						self.setElementAnimation(to, null);
+						self.setElementAnimation(from, null);
+						self.showViewByMediaQuery(to);
+						self.fadeOut(from, update, reverse);
+
+						setTimeout(function () {
+							self.setElementAnimation(to, null);
+							self.setElementAnimation(from, null);
+							self.hideView(from);
+							self.updateURL();
+							self.setViewVariables(to);
+						}, duration)
+					}
+				}
+			}
+
+			self.fadeIn = function (element, update, animation) {
+				self.showViewByMediaQuery(element);
+
+				if (update) {
+					self.updateURL(element);
+
+					element.addEventListener("animationend", function (event) {
+						element.style.animation = null;
+						self.setViewVariables(element);
+						self.updateViewLabel();
+						element.removeEventListener("animationend", arguments.callee);
+					});
+				}
+
+				self.setElementAnimation(element, null);
+
+				element.style.animation = animation;
+			}
+
+			self.fadeOutCurrentView = function (animation, update) {
+				if (self.currentView) {
+					self.fadeOut(self.currentView, update, animation);
+				}
+				if (self.currentOverlay) {
+					self.fadeOut(self.currentOverlay, update, animation);
+				}
+			}
+
+			self.fadeOut = function (element, update, animation) {
+				if (update) {
+					element.addEventListener("animationend", function (event) {
+						element.style.animation = null;
+						self.hideView(element);
+						element.removeEventListener("animationend", arguments.callee);
+					});
+				}
+
+				element.style.animationPlayState = "paused";
+				element.style.animation = animation;
+				element.style.animationPlayState = "running";
+			}
+
+			self.getReverseAnimation = function (animation) {
+				if (animation && animation.indexOf("reverse") == -1) {
+					animation += " reverse";
+				}
+
+				return animation;
+			}
+
+			/**
+			 * Get duration in animation string
+			 * @param {String} animation animation value
+			 * @param {Boolean} inMilliseconds length in milliseconds if true
+			 */
+			self.getAnimationDuration = function (animation, inMilliseconds) {
+				var duration = 0;
+				var expression = /.+(\d\.\d)s.+/;
+
+				if (animation && animation.match(expression)) {
+					duration = parseFloat(animation.replace(expression, "$" + "1"));
+					if (duration && inMilliseconds) duration = duration * 1000;
+				}
+
+				return duration;
+			}
+
+			self.setElementAnimation = function (element, animation, priority) {
+				element.style.setProperty("animation", animation, "important");
+			}
+
+			self.getElement = function (id) {
+				var elementId = id ? id.trim() : id;
+				var element = elementId ? document.getElementById(elementId) : null;
+
+				return element;
+			}
+
+			self.resizeHandler = function (event) {
+				var view = self.getVisibleView();
+
+				if (self.showByMediaQuery && view) {
+					self.setViewOptions(view);
+					self.setViewVariables(view);
+				} else {
+					self.scaleViewIfNeeded();
+				}
+
+				window.dispatchEvent(new Event(self.APPLICATION_RESIZE));
+			}
+
+			self.scaleViewIfNeeded = function (view) {
+
+				if (self.scaleViewsOnResize) {
+					if (view == null) {
+						view = self.getVisibleView();
+					}
+
+					var isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME) == "false" ? false : true;
+
+					if (isViewScaled) {
+						self.scaleViewToFit(view, true);
+					} else {
+						self.scaleViewToActualSize(view);
+					}
+				} else if (view) {
+					self.centerView(view);
+				}
+			}
+
+			self.centerView = function (view) {
+
+				if (self.scaleToFit) {
+					self.scaleViewToFit(view, true);
+				} else {
+					self.scaleViewToActualSize(view); // for centering support for now
+				}
+			}
+
+			self.preventDoubleClick = function (event) {
+				event.stopImmediatePropagation();
+			}
+
+			self.hashChangeHandler = function (event) {
+				var fragment = window.location.hash ? window.location.hash.replace("#", "") : "";
+				var view = self.getViewById(fragment);
+
+				if (view) {
+					self.hideViews();
+					self.showView(view);
+					self.setViewVariables(view);
+					self.updateViewLabel();
+					window.dispatchEvent(new Event(self.VIEW_CHANGE));
+				} else {
+					window.dispatchEvent(new Event(self.VIEW_NOT_FOUND));
+				}
+			}
+
+			self.popStateHandler = function (event) {
+				var state = event.state;
+				var fragment = state ? state.name : window.location.hash;
+				var view = self.getViewById(fragment);
+
+				if (view) {
+					self.hideViews();
+					self.showView(view);
+					self.updateViewLabel();
+				} else {
+					window.dispatchEvent(new Event(self.VIEW_NOT_FOUND));
+				}
+			}
+
+			self.doubleClickHandler = function (event) {
+				var view = self.getVisibleView();
+				var scaleValue = view ? self.getViewScaleValue(view) : 1;
+				var scaleNeededToFit = view ? self.getViewFitToViewportScale(view) : 1;
+				var scaleNeededToFitWidth = view ? self.getViewFitToViewportWidthScale(view) : 1;
+				var scaleNeededToFitHeight = view ? self.getViewFitToViewportHeightScale(view) : 1;
+				var scaleToFitType = self.scaleToFitType;
+
+				// Three scenarios
+				// - scale to fit on double click
+				// - set scale to actual size on double click
+				// - switch between scale to fit and actual page size
+
+				if (scaleToFitType == "width") {
+					scaleNeededToFit = scaleNeededToFitWidth;
+				} else if (scaleToFitType == "height") {
+					scaleNeededToFit = scaleNeededToFitHeight;
+				}
+
+				// if scale and actual size enabled then switch between
+				if (self.scaleToFitOnDoubleClick && self.actualSizeOnDoubleClick) {
+					var isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME);
+					var isScaled = false;
+
+					// if scale is not 1 then view needs scaling
+					if (scaleNeededToFit != 1) {
+
+						// if current scale is at 1 it is at actual size
+						// scale it to fit
+						if (scaleValue == 1) {
+							self.scaleViewToFit(view);
+							isScaled = true;
+						} else {
+							// scale is not at 1 so switch to actual size
+							self.scaleViewToActualSize(view);
+							isScaled = false;
+						}
+					} else {
+						// view is smaller than viewport 
+						// so scale to fit() is scale actual size
+						// actual size and scaled size are the same
+						// but call scale to fit to retain centering
+						self.scaleViewToFit(view);
+						isScaled = false;
+					}
+
+					view.setAttributeNS(null, self.SIZE_STATE_NAME, isScaled + "");
+					isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME);
+				} else if (self.scaleToFitOnDoubleClick) {
+					self.scaleViewToFit(view);
+				} else if (self.actualSizeOnDoubleClick) {
+					self.scaleViewToActualSize(view);
+				}
+
+			}
+
+			self.scaleViewToFit = function (view) {
+				return self.setViewScaleValue(view, true);
+			}
+
+			self.scaleViewToActualSize = function (view) {
+				self.setViewScaleValue(view, false, 1);
+			}
+
+			self.onloadHandler = function (event) {
+				self.initialize();
+			}
+
+			self.getStackArray = function (error) {
+				var value = "";
+
+				if (error == null) {
+					try {
+						error = new Error("Stack");
+					} catch (e) {
+
+					}
+				}
+
+				if ("stack" in error) {
+					value = error.stack;
+					var methods = value.split(/\n/g);
+
+					var newArray = methods ? methods.map(function (value, index, array) {
+						value = value.replace(/\@.*/, "");
+						return value;
+					}) : null;
+
+					if (newArray && newArray[0].includes("getStackTrace")) {
+						newArray.shift();
+					}
+					if (newArray && newArray[0].includes("getStackArray")) {
+						newArray.shift();
+					}
+					if (newArray && newArray[0] == "") {
+						newArray.shift();
+					}
+
+					return newArray;
+				}
+
+				return null;
+			}
+
+			self.log = function (value) {
+				console.log.apply(this, [value]);
+			}
+
+			// initialize on load
+			// sometimes the body size is 0 so we call this now and again later
+			window.addEventListener("load", self.onloadHandler);
+			window.document.addEventListener("DOMContentLoaded", self.onloadHandler);
+		}
+
+		window.application = new Application();
+	</script>
+</head>
+
+<body>
+	<div id="mobile_details">
+		<svg class="Rectangle_38">
+			<rect fill="rgba(255,255,183,1)" id="Rectangle_38" rx="0" ry="0" x="0" y="0" width="1088" height="185">
+			</rect>
+		</svg>
+		<svg class="Rectangle_35">
+			<rect fill="rgba(255,251,135,1)" id="Rectangle_35" rx="0" ry="0" x="0" y="0" width="1088" height="185">
+			</rect>
+		</svg>
+		<div id="navbar" class="navbar">
+			<svg class="Rectangle_1">
+				<rect fill="rgba(0,85,151,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter"
+					stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1" rx="0" ry="0"
+					x="0" y="0" width="1366" height="80">
+				</rect>
+			</svg>
+
+			<div onclick="application.goToTargetView(event)" id="Group_649">
+				<svg class="Rectangle_2">
+					<rect fill="rgba(255,245,107,1)" stroke="rgba(112,112,112,1)" stroke-width="1px"
+						stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto"
+						id="Rectangle_2" rx="12" ry="12" x="0" y="0" width="168" height="41">
+					</rect>
+				</svg>
+				<div id="log_in___sign_up">
+					<span>Log in / Sign Up</span>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="home">
+				<span>Home</span>
+			</div>
+
+			<div id="service">
+				<span><a href="home.html" style="color: white; text-decoration: none;">Service</a></span>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="about">
+				<span>About</span>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="blog">
+				<span>Blog</span>
+			</div>
+			<div id="contact">
+				<span><a href="#" style="color: white; text-decoration: none; ">Contact</a></span>
+			</div>
+
+		</div>
+		<img id="ID457754ae_9e1f_41b0_be9a_8dec" src="../static/images/ID457754ae_9e1f_41b0_be9a_8dec.png"
+			srcset="../static/images/ID457754ae_9e1f_41b0_be9a_8dec.png 1x, ID457754ae_9e1f_41b0_be9a_8dec@2x.png 2x">
+
+		<svg class="Rectangle_36">
+			<rect fill="rgba(255,255,183,1)" id="Rectangle_36" rx="0" ry="0" x="0" y="0" width="1088" height="185">
+			</rect>
+		</svg>
+		<svg class="Rectangle_37">
+			<rect fill="rgba(255,251,135,1)" id="Rectangle_37" rx="0" ry="0" x="0" y="0" width="1088" height="185">
+			</rect>
+		</svg>
+		<div id="Group_9">
+			<svg class="Icon_metro_display" viewBox="2.571 3.856 75 83.214">
+				<path fill="rgba(0,0,0,1)" id="Icon_metro_display"
+					d="M 2.570703029632568 3.856067180633545 L 2.570703029632568 63.29496765136719 L 77.57069396972656 63.29496765136719 L 77.57069396972656 3.856067180633545 L 2.570698499679565 3.856067180633545 Z M 72.88319396972656 57.35107421875 L 7.258203983306885 57.35107421875 L 7.258203983306885 9.799957275390625 L 72.88319396972656 9.799957275390625 L 72.88319396972656 57.35107421875 Z M 51.78945159912109 69.23885345458984 L 28.35195159912109 69.23885345458984 L 26.00819969177246 81.12664031982422 L 21.3206958770752 87.07052612304688 L 58.82069778442383 87.07052612304688 L 54.13319778442383 81.12664031982422 L 51.78945159912109 69.23885345458984 Z">
+				</path>
+			</svg>
+			<svg class="Icon_material_fullscreen_exit" viewBox="7.5 7.5 25.101 24.603">
+				<path fill="rgba(0,0,0,1)" id="Icon_material_fullscreen_exit"
+					d="M 7.500001907348633 26.83117294311523 L 12.87873077392578 26.83117294311523 L 12.87873077392578 32.10330963134766 L 16.46455001831055 32.10330963134766 L 16.46455001831055 23.31641387939453 L 7.500001907348633 23.31641387939453 L 7.500001907348633 26.83117294311523 Z M 12.87873077392578 12.77213859558105 L 7.500001907348633 12.77213859558105 L 7.500001907348633 16.28689765930176 L 16.46455001831055 16.28689765930176 L 16.46455001831055 7.500000953674316 L 12.87873077392578 7.500000953674316 L 12.87873077392578 12.77213859558105 Z M 23.63618469238281 32.10330963134766 L 27.22200775146484 32.10330963134766 L 27.22200775146484 26.83117294311523 L 32.60073471069336 26.83117294311523 L 32.60073471069336 23.31641387939453 L 23.63618469238281 23.31641387939453 L 23.63618469238281 32.10330963134766 Z M 27.22200775146484 12.77213859558105 L 27.22200775146484 7.500000953674316 L 23.63618469238281 7.500000953674316 L 23.63618469238281 16.28689765930176 L 32.60073471069336 16.28689765930176 L 32.60073471069336 12.77213859558105 L 27.22200775146484 12.77213859558105 Z">
+				</path>
+			</svg>
+		</div>
+		<form action="/mobile_details" method="GET">
+			<script id="tutorial-template" type="text/template">
+
+			<div id="Processor">
+				<span>Processor</span>
+			</div>
+			<div id="HiSilicon_Kirin_980_Octa_Core_">
+				<span>HiSilicon Kirin 980 Octa Core 7 Nano<br />Technology</span>
+			</div>
+			<div id="Storage___RAM">
+				<span>Storage &<br />RAM</span>
+			</div>
+			<div id="ID256_GB__8_GB_RAM">
+				<span>{{Storage}} GB, {{Rammobile}} GB RAM</span>
+			</div>
+			<div id="Camera">
+				<span>Camera</span>
+			</div>
+			<div id="Quad_background_48___16___8___">
+				<span>Quad Background 48 + 16 + 8 + 2 MP.<br />Front / 32 mb</span>
+			</div>
+			<div id="ID6_26_inch_FHD___display_with">
+				<span>6.26-inch FHD + Display With a Small Hole</span>
+			</div>
+			<div id="Screen">
+				<span>Screen</span>
+			</div>
+			<svg class="Rectangle_45">
+				<rect fill="rgba(255,251,135,1)" id="Rectangle_45" rx="0" ry="0" x="0" y="0" width="1088" height="185">
+				</rect>
+			</svg>
+			<svg class="Rectangle_46">
+				<rect fill="rgba(255,255,183,1)" id="Rectangle_46" rx="0" ry="0" x="0" y="0" width="1088" height="185">
+				</rect>
+			</svg>
+			<div id="Operating__system">
+				<span>Operating <br />System</span>
+			</div>
+			<div id="Android_9_0">
+				<span>Android 9.0</span>
+			</div>
+			<div id="Battery">
+				<span>Battery</span>
+			</div>
+			<div id="ID4000_mAh">
+				<span>4000 mAh</span>
+			</div>
+			<img id="Honor_20_Pro_1" src="../static/images/Honor_20_Pro_1.png"
+				srcset="../static/images/Honor_20_Pro_1.png 1x, ../static/images/Honor_20_Pro_1@2x.png 2x">
+			<div id="Group_603">
+				<svg class="Line_6" viewBox="0 0 1088 2">
+					<path fill="transparent" stroke="rgba(0,85,151,1)" stroke-width="2px" stroke-linejoin="miter"
+						stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_6"
+						d="M 0 0 L 1088 0">
+					</path>
+				</svg>
+				<div id="Group_599">
+					<svg class="Rectangle_33">
+						<rect fill="rgba(0,85,151,1)" stroke="rgba(0,85,151,1)" stroke-width="1px"
+							stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto"
+							id="Rectangle_33" rx="0" ry="0" x="0" y="0" width="168" height="60">
+						</rect>
+					</svg>
+					<div id="details">
+						<span>Details</span>
+					</div>
+				</div>
+				<div onclick="application.goToTargetView(event)" id="Group_600">
+					<svg class="Rectangle_56">
+						<rect fill="rgba(255,255,255,1)" stroke="rgba(0,85,151,1)" stroke-width="1px"
+							stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto"
+							id="Rectangle_56" rx="0" ry="0" x="0" y="0" width="168" height="60">
+						</rect>
+					</svg>
+					<div id="gallery">
+						<span>Gallery</span>
+					</div>
+				</div>
+				<div onclick="application.goToTargetView(event)" id="Group_601">
+					<svg class="Rectangle_57">
+						<rect fill="rgba(255,255,255,1)" stroke="rgba(0,85,151,1)" stroke-width="1px"
+							stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto"
+							id="Rectangle_57" rx="0" ry="0" x="0" y="0" width="168" height="60">
+						</rect>
+					</svg>
+					<div id="reviews">
+						<span>Reviews</span>
+					</div>
+				</div>
+				<div onclick="application.goToTargetView(event)" id="Group_602">
+					<svg class="Rectangle_60">
+						<rect fill="rgba(255,255,255,1)" stroke="rgba(0,85,151,1)" stroke-width="1px"
+							stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto"
+							id="Rectangle_60" rx="0" ry="0" x="0" y="0" width="168" height="60">
+						</rect>
+					</svg>
+					<div id="buy_now">
+						<span>Buy Now</span>
+					</div>
+				</div>
+			</div>
+
+			<div id="Icon_feather_cpu">
+				<svg class="Path_47" viewBox="6 6 56 56">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_47"
+						d="M 13 6 L 54.99999618530273 6 C 58.86598968505859 6 62 9.134006500244141 62 13 L 62 54.99999618530273 C 62 58.86598968505859 58.86598968505859 62 54.99999618530273 62 L 13 62 C 9.134004592895508 62 6 58.86598968505859 6 54.99999618530273 L 6 13 C 6 9.134004592895508 9.134008407592773 5.999998092651367 13.00000190734863 6 Z">
+					</path>
+				</svg>
+				<svg class="Path_48" viewBox="13.5 13.5 20 20">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_48"
+						d="M 13.50000190734863 13.50000190734863 L 33.50000381469727 13.50000190734863 L 33.50000381469727 33.50000381469727 L 13.50000190734863 33.50000381469727 L 13.50000190734863 13.50000190734863 Z">
+					</path>
+				</svg>
+				<svg class="Path_49" viewBox="13.5 1.5 3 4.5">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_49"
+						d="M 13.5 1.5 L 13.5 6">
+					</path>
+				</svg>
+				<svg class="Path_50" viewBox="22.5 1.5 3 4.5">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_50"
+						d="M 22.5 1.5 L 22.5 6">
+					</path>
+				</svg>
+				<svg class="Path_51" viewBox="13.5 30 3 4.5">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_51"
+						d="M 13.5 30 L 13.5 34.5">
+					</path>
+				</svg>
+				<svg class="Path_52" viewBox="22.5 30 3 4.5">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_52"
+						d="M 22.5 30 L 22.5 34.5">
+					</path>
+				</svg>
+				<svg class="Path_53" viewBox="30 13.5 4.5 3">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_53"
+						d="M 30 13.5 L 34.5 13.5">
+					</path>
+				</svg>
+				<svg class="Path_54" viewBox="30 21 4.5 3">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_54"
+						d="M 30 21 L 34.5 21">
+					</path>
+				</svg>
+				<svg class="Path_55" viewBox="1.5 13.5 4.5 3">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_55"
+						d="M 1.5 13.5 L 6 13.5">
+					</path>
+				</svg>
+				<svg class="Path_56" viewBox="1.5 21 4.5 3">
+					<path fill="transparent" stroke="rgba(0,0,0,1)" stroke-width="3px" stroke-linejoin="round"
+						stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Path_56"
+						d="M 1.5 21 L 6 21">
+					</path>
+				</svg>
+			</div>
+			<svg class="Icon_awesome_microchip" viewBox="0 0 60 75">
+				<path fill="rgba(0,0,0,1)" id="Icon_awesome_microchip"
+					d="M 48.75 7.03125 L 48.75 67.96874237060547 C 48.75 71.85204315185547 46.23163986206055 75 43.12500381469727 75 L 16.87500190734863 75 C 13.76836013793945 75 11.25000095367432 71.85204315185547 11.25000095367432 67.96874237060547 L 11.25000095367432 7.03125 C 11.25000095367432 3.14794921875 13.76836013793945 0 16.87500190734863 0 L 43.12500381469727 0 C 46.23163986206055 0 48.75 3.14794921875 48.75 7.03125 Z M 60 15.52734184265137 L 60 17.28515434265137 C 60 17.77056121826172 59.68520355224609 18.16406440734863 59.296875 18.16406440734863 L 57.18750381469727 18.16406440734863 L 57.18750381469727 19.04296875 C 57.18750381469727 19.52837562561035 56.87269592285156 19.92187309265137 56.484375 19.92187309265137 L 51.5625 19.92187309265137 L 51.5625 12.89062404632568 L 56.484375 12.89062404632568 C 56.87269592285156 12.89062404632568 57.18750381469727 13.28412437438965 57.18750381469727 13.76953125 L 57.18750381469727 14.64843654632568 L 59.296875 14.64843654632568 C 59.68520355224609 14.64843654632568 60 15.04193592071533 60 15.52734088897705 Z M 60 29.58984565734863 L 60 31.34765625 C 60 31.83306121826172 59.68520355224609 32.22656631469727 59.296875 32.22656631469727 L 57.18750381469727 32.22655868530273 L 57.18750381469727 33.10546493530273 C 57.18750381469727 33.59087371826172 56.87269592285156 33.98437118530273 56.484375 33.98437118530273 L 51.5625 33.98437118530273 L 51.5625 26.953125 L 56.484375 26.953125 C 56.87269592285156 26.953125 57.18750381469727 27.34662437438965 57.18750381469727 27.83202934265137 L 57.18750381469727 28.7109375 L 59.296875 28.7109375 C 59.68520355224609 28.71093940734863 60 29.10443878173828 60 29.58984565734863 Z M 60 43.65234375 L 60 45.41015625 C 60 45.89556121826172 59.68520355224609 46.2890625 59.296875 46.2890625 L 57.18750381469727 46.2890625 L 57.18750381469727 47.16796875 C 57.18750381469727 47.65336990356445 56.87269592285156 48.046875 56.484375 48.046875 L 51.5625 48.046875 L 51.5625 41.01562118530273 L 56.484375 41.01562118530273 C 56.87269592285156 41.01562118530273 57.18750381469727 41.40912628173828 57.18750381469727 41.89452743530273 L 57.18750381469727 42.77344131469727 L 59.296875 42.77344131469727 C 59.68520355224609 42.77344131469727 60 43.16693496704102 60 43.65234375 Z M 60 57.71484375 L 60 59.47265625 C 60 59.95805358886719 59.68520355224609 60.35155487060547 59.296875 60.35155487060547 L 57.18750381469727 60.35155868530273 L 57.18750381469727 61.23046875 C 57.18750381469727 61.71586608886719 56.87269592285156 62.1093635559082 56.484375 62.1093635559082 L 51.5625 62.10936737060547 L 51.5625 55.078125 L 56.484375 55.078125 C 56.87269592285156 55.078125 57.18750381469727 55.47161865234375 57.18750381469727 55.95703125 L 57.18750381469727 56.83592987060547 L 59.296875 56.83592987060547 C 59.68520355224609 56.83592987060547 60 57.22943115234375 60 57.71483993530273 Z M 3.515625238418579 55.078125 L 8.437500953674316 55.078125 L 8.437500953674316 62.10936737060547 L 3.515625238418579 62.10936737060547 C 3.127299785614014 62.1093635559082 2.812500238418579 61.71586608886719 2.812500238418579 61.23046875 L 2.812500238418579 60.35155868530273 L 0.7031250596046448 60.35155868530273 C 0.3147997856140137 60.35155487060547 0 59.95805358886719 0 59.47264862060547 L 0 57.71484375 C 0 57.22943115234375 0.3147999048233032 56.83592987060547 0.7031251192092896 56.83592987060547 L 2.812500238418579 56.83592987060547 L 2.812500238418579 55.95703125 C 2.812500238418579 55.47161865234375 3.127300024032593 55.078125 3.515625238418579 55.078125 Z M 3.515625238418579 41.01562118530273 L 8.437500953674316 41.01562118530273 L 8.437500953674316 48.046875 L 3.515625238418579 48.046875 C 3.127299785614014 48.046875 2.812500238418579 47.65336990356445 2.812500238418579 47.16796875 L 2.812500238418579 46.2890625 L 0.7031250596046448 46.2890625 C 0.3147997856140137 46.2890625 0 45.89556121826172 0 45.41015625 L 0 43.65234375 C 0 43.16693496704102 0.3147999048233032 42.77344131469727 0.7031251192092896 42.77344131469727 L 2.812500238418579 42.77344131469727 L 2.812500238418579 41.89452743530273 C 2.812500238418579 41.40912628173828 3.127300024032593 41.01562118530273 3.515625238418579 41.01562118530273 Z M 3.515625238418579 26.953125 L 8.437500953674316 26.953125 L 8.437500953674316 33.98437118530273 L 3.515625238418579 33.98437118530273 C 3.127299785614014 33.98437118530273 2.812500238418579 33.59087371826172 2.812500238418579 33.10546875 L 2.812500238418579 32.22655868530273 L 0.7031250596046448 32.22655868530273 C 0.3147997856140137 32.22656631469727 0 31.83306121826172 0 31.34765625 L 0 29.58984565734863 C 0 29.10443878173828 0.3147999048233032 28.71093940734863 0.7031251192092896 28.71093940734863 L 2.812500238418579 28.7109375 L 2.812500238418579 27.83202934265137 C 2.812500238418579 27.34662437438965 3.127300024032593 26.953125 3.515625238418579 26.953125 Z M 3.515625238418579 12.89062404632568 L 8.437500953674316 12.89062404632568 L 8.437500953674316 19.92187309265137 L 3.515625238418579 19.92187309265137 C 3.127299785614014 19.92187309265137 2.812500238418579 19.52837562561035 2.812500238418579 19.04296875 L 2.812500238418579 18.16406440734863 L 0.7031250596046448 18.16406440734863 C 0.3147997856140137 18.16406440734863 0 17.77056121826172 0 17.28515434265137 L 0 15.52734184265137 C 0 15.04193592071533 0.3147999048233032 14.64843654632568 0.7031251192092896 14.64843654632568 L 2.812500238418579 14.64843654632568 L 2.812500238418579 13.76953125 C 2.812500238418579 13.28412437438965 3.127300024032593 12.89062404632568 3.515625238418579 12.89062404632568 Z">
+				</path>
+			</svg>
+			<div id="Icon_ionic_ios_camera">
+				<svg class="Path_25" viewBox="13.957 15.293 27.091 27.091">
+					<path fill="rgba(0,0,0,1)" id="Path_25"
+						d="M 41.04819488525391 28.83854866027832 C 41.04819488525391 36.3195686340332 34.98362731933594 42.38413619995117 27.50261306762695 42.38413619995117 C 20.0215950012207 42.38413619995117 13.95702743530273 36.3195686340332 13.95702743530273 28.83854866027832 C 13.95702743530273 21.35753059387207 20.0215950012207 15.29296493530273 27.50261306762695 15.29296493530273 C 34.98362731933594 15.29296493530273 41.04819488525391 21.35753059387207 41.04819488525391 28.83854866027832 Z">
+					</path>
+				</svg>
+				<svg class="Path_26" viewBox="4.5 7.875 75 60">
+					<path fill="rgba(0,0,0,1)" id="Path_26"
+						d="M 73.54297637939453 17.87499618530273 L 62.89842987060547 17.87499618530273 C 62 17.87499618530273 61.16015625 17.45833206176758 60.55467987060547 16.75000190734863 C 55.00781631469727 10.12499809265137 52.91796875 7.874999523162842 50.65234756469727 7.874999523162842 L 33.953125 7.874999523162842 C 31.66796493530273 7.874999523162842 29.4218692779541 10.12499809265137 23.85546493530273 16.77083206176758 C 23.2695255279541 17.47916603088379 22.41015243530273 17.87499618530273 21.5312442779541 17.87499618530273 L 20.7304630279541 17.87499618530273 L 20.7304630279541 16.20833206176758 C 20.7304630279541 15.29166603088379 20.0273380279541 14.54166793823242 19.16796493530273 14.54166793823242 L 14.08984279632568 14.54166793823242 C 13.23046588897705 14.54166793823242 12.52734184265137 15.29166603088379 12.52734184265137 16.20833206176758 L 12.52734184265137 17.87499618530273 L 11.06249809265137 17.87499618530273 C 7.605466842651367 17.87499618530273 4.499998569488525 20.625 4.499998569488525 24.27083206176758 L 4.499998569488525 60.9375 C 4.499998569488525 64.58332824707031 7.605466842651367 67.875 11.04296875 67.875 L 73.54297637939453 67.875 C 76.98046875 67.875 79.5 64.58332824707031 79.5 60.9375 L 79.5 24.27083206176758 C 79.5 20.625 76.98046875 17.87499618530273 73.54297637939453 17.87499618530273 Z M 42.78124618530273 59.625 C 32.95702743530273 60.10416412353516 24.87108993530273 51.47916793823242 25.32030868530273 41 C 25.71093559265137 31.85416603088379 32.64453125 24.45833206176758 41.21875 24.04166221618652 C 51.04296875 23.56249809265137 59.12890243530273 32.1875 58.6796875 42.66667175292969 C 58.2890625 51.81250381469727 51.35547256469727 59.20833587646484 42.78124618530273 59.625 Z M 60.75 29.95833206176758 C 59.34374237060547 29.95833206176758 58.2109375 28.74999809265137 58.2109375 27.24999618530273 C 58.2109375 25.74999618530273 59.34374237060547 24.54166603088379 60.75 24.54166603088379 C 62.15624618530273 24.54166603088379 63.28905868530273 25.74999618530273 63.28905868530273 27.24999618530273 C 63.28905868530273 28.74999809265137 62.15624618530273 29.95833206176758 60.75 29.95833206176758 Z">
+					</path>
+				</svg>
+			</div>
+			<svg class="Icon_ionic_md_battery_charging" viewBox="10.125 2.25 35.542 66.948">
+				<path fill="rgba(0,0,0,1)" id="Icon_ionic_md_battery_charging"
+					d="M 40.93853759765625 8.944750785827637 L 35.00431442260742 8.944750785827637 L 35.00431442260742 2.25 L 20.78756332397461 2.25 L 20.78756332397461 8.944750785827637 L 14.8533411026001 8.944750785827637 C 12.2511682510376 8.944750785827637 10.12500095367432 10.94719791412354 10.12500095367432 13.3979549407959 L 10.12500095367432 64.71442413330078 C 10.12500095367432 67.19506072998047 12.2511682510376 69.197509765625 14.8533411026001 69.197509765625 L 40.90680313110352 69.197509765625 C 43.54071426391602 69.197509765625 45.6668815612793 67.19506072998047 45.6668815612793 64.74430847167969 L 45.6668815612793 13.3979549407959 C 45.6668815612793 10.94719791412354 43.54071426391602 8.944750785827637 40.93853759765625 8.944750785827637 Z M 24.34175109863281 62.50275421142578 L 24.34175109863281 44.09219360351563 L 17.23337364196777 44.09219360351563 L 31.45013236999512 18.98687934875488 L 31.45013236999512 37.39744186401367 L 38.55850219726563 37.39744186401367 L 24.34175109863281 62.50275421142578 Z">
+				</path>
+			</svg>
+			<svg class="Icon_material_settings" viewBox="3.406 3 35 35">
+				<path fill="rgba(0,0,0,1)" id="Icon_material_settings"
+					d="M 34.27723693847656 22.21500396728516 C 34.34920120239258 21.65500259399414 34.40317535400391 21.09500312805176 34.40317535400391 20.50000381469727 C 34.40317535400391 19.90500259399414 34.34920120239258 19.34500312805176 34.27723693847656 18.78500366210938 L 38.07332611083984 15.89750289916992 C 38.41515350341797 15.63500213623047 38.50510787963867 15.16250324249268 38.28921890258789 14.77750301361084 L 34.69103240966797 8.722501754760742 C 34.47513961791992 8.337501525878906 33.98938751220703 8.197502136230469 33.59358215332031 8.337501525878906 L 29.11384010314941 10.08750247955322 C 28.17831039428711 9.38750171661377 27.17081832885742 8.810002326965332 26.07337379455566 8.372502326965332 L 25.38971900939941 3.735001087188721 C 25.33574485778809 3.315000057220459 24.95793533325195 3 24.5081615447998 3 L 17.31178855895996 3 C 16.86201667785645 3 16.48420715332031 3.315000057220459 16.43023490905762 3.735000610351563 L 15.74657821655273 8.372501373291016 C 14.64913272857666 8.810001373291016 13.64163970947266 9.405001640319824 12.70611190795898 10.08750152587891 L 8.226370811462402 8.337501525878906 C 7.81257963180542 8.180001258850098 7.344814777374268 8.337501525878906 7.128923892974854 8.722500801086426 L 3.53073787689209 14.77750205993652 C 3.296855449676514 15.16250133514404 3.404801368713379 15.63500213623047 3.746629238128662 15.89750289916992 L 7.542715549468994 18.78500175476074 C 7.470752239227295 19.34500122070313 7.416779041290283 19.9225025177002 7.416779041290283 20.50000190734863 C 7.416779041290283 21.07749938964844 7.470752239227295 21.65500068664551 7.542715549468994 22.21500015258789 L 3.746629238128662 25.10250091552734 C 3.404801368713379 25.3650016784668 3.314846515655518 25.83750152587891 3.53073787689209 26.22250175476074 L 7.128923892974854 32.27750396728516 C 7.344814777374268 32.66250228881836 7.830570697784424 32.8025016784668 8.226370811462402 32.66250228881836 L 12.70611190795898 30.91250228881836 C 13.64163970947266 31.61250305175781 14.64913272857666 32.19000244140625 15.74657821655273 32.62750244140625 L 16.43023490905762 37.26499938964844 C 16.48420715332031 37.68500137329102 16.86201667785645 38.00000381469727 17.31178855895996 38.00000381469727 L 24.5081615447998 38.00000381469727 C 24.95793533325195 38.00000381469727 25.33574485778809 37.68500137329102 25.38971900939941 37.26499938964844 L 26.07337379455566 32.62749862670898 C 27.17082023620605 32.18999862670898 28.17831039428711 31.59499740600586 29.11384010314941 30.91250038146973 L 33.59358215332031 32.66249847412109 C 34.00737380981445 32.81999969482422 34.47513961791992 32.66249847412109 34.69103240966797 32.27750015258789 L 38.28921890258789 26.22249794006348 C 38.50510787963867 25.83749961853027 38.41515350341797 25.36499786376953 38.07332611083984 25.10249900817871 L 34.27723693847656 22.21499824523926 Z M 20.90997505187988 26.62500381469727 C 17.43772506713867 26.62500381469727 14.61314964294434 23.87750434875488 14.61314964294434 20.50000381469727 C 14.61314964294434 17.12250328063965 17.43772506713867 14.37500286102295 20.90997505187988 14.37500286102295 C 24.38222503662109 14.37500286102295 27.20680236816406 17.12250328063965 27.20680236816406 20.50000381469727 C 27.20680236816406 23.87750434875488 24.38222503662109 26.62500381469727 20.90997505187988 26.62500381469727 Z">
+				</path>
+			</svg>
+			<svg class="Icon_material_settings_bat" viewBox="3.406 3 31 31">
+				<path fill="rgba(0,0,0,1)" id="Icon_material_settings_bat"
+					d="M 30.74909591674805 20.01900100708008 C 30.81283569335938 19.52300071716309 30.86063957214355 19.02700233459473 30.86063957214355 18.50000190734863 C 30.86063957214355 17.97300148010254 30.81283569335938 17.47700119018555 30.74909591674805 16.98100090026855 L 34.11134719848633 14.42350101470947 C 34.41410827636719 14.19100093841553 34.49378204345703 13.77250099182129 34.30256271362305 13.4315013885498 L 31.11559867858887 8.068500518798828 C 30.92438125610352 7.727500438690186 30.49414253234863 7.603500843048096 30.14357376098633 7.727500438690186 L 26.17580223083496 9.277501106262207 C 25.34718894958496 8.657501220703125 24.4548397064209 8.146000862121582 23.48281669616699 7.758500576019287 L 22.87729263305664 3.651000499725342 C 22.82948875427246 3.278999805450439 22.4948558807373 3 22.09648513793945 3 L 15.72255706787109 3 C 15.32418632507324 3 14.98955535888672 3.278999805450439 14.94175148010254 3.651000022888184 L 14.3362283706665 7.758500099182129 C 13.36420345306396 8.145999908447266 12.47185325622559 8.673000335693359 11.64324283599854 9.277500152587891 L 7.675471782684326 7.727499961853027 C 7.308970928192139 7.587999820709229 6.894665241241455 7.727499961853027 6.703447341918945 8.068499565124512 L 3.516482353210449 13.43150043487549 C 3.309329748153687 13.77250003814697 3.404938697814941 14.19099998474121 3.707700490951538 14.42350006103516 L 7.069948673248291 16.98099899291992 C 7.006209373474121 17.47699928283691 6.958405017852783 17.98850059509277 6.958405017852783 18.5 C 6.958405017852783 19.01149749755859 7.006209373474121 19.52299880981445 7.069948673248291 20.01899909973145 L 3.707700729370117 22.57649993896484 C 3.404938936233521 22.80900001525879 3.325264692306519 23.22749900817871 3.516482591629028 23.5684986114502 L 6.703447341918945 28.93149948120117 C 6.894665241241455 29.27249908447266 7.324905395507813 29.39649963378906 7.675471782684326 29.27249908447266 L 11.64324283599854 27.72249984741211 C 12.47185325622559 28.34249877929688 13.36420345306396 28.8539981842041 14.3362283706665 29.24149894714355 L 14.94175148010254 33.34899520874023 C 14.98955535888672 33.72099685668945 15.32418632507324 33.99999618530273 15.72255706787109 33.99999618530273 L 22.09648513793945 33.99999618530273 C 22.4948558807373 33.99999618530273 22.82948875427246 33.72099685668945 22.87729263305664 33.34899520874023 L 23.48281669616699 29.24149703979492 C 24.45484161376953 28.85399627685547 25.34718894958496 28.32699584960938 26.17580223083496 27.72249794006348 L 30.14357376098633 29.27249717712402 C 30.51007461547852 29.41199684143066 30.92438125610352 29.27249717712402 31.11559867858887 28.93149757385254 L 34.30256271362305 23.56849670410156 C 34.49378204345703 23.22749710083008 34.41410827636719 22.80899620056152 34.11134719848633 22.57649803161621 L 30.74909591674805 20.01899719238281 Z M 18.90952110290527 23.92500114440918 C 15.83409976959229 23.92500114440918 13.3323335647583 21.49150276184082 13.3323335647583 18.50000190734863 C 13.3323335647583 15.50850009918213 15.83409976959229 13.07500076293945 18.90952110290527 13.07500076293945 C 21.98494338989258 13.07500076293945 24.48670959472656 15.50850009918213 24.48670959472656 18.50000190734863 C 24.48670959472656 21.49150276184082 21.98494338989258 23.92500114440918 18.90952110290527 23.92500114440918 Z">
+				</path>
+			</svg>
+			<svg class="Icon_material_settings_bau" viewBox="3.406 3 31 31">
+				<path fill="rgba(0,0,0,1)" id="Icon_material_settings_bau"
+					d="M 30.74909591674805 20.01900100708008 C 30.81283569335938 19.52300071716309 30.86063957214355 19.02700233459473 30.86063957214355 18.50000190734863 C 30.86063957214355 17.97300148010254 30.81283569335938 17.47700119018555 30.74909591674805 16.98100090026855 L 34.11134719848633 14.42350101470947 C 34.41410827636719 14.19100093841553 34.49378204345703 13.77250099182129 34.30256271362305 13.4315013885498 L 31.11559867858887 8.068500518798828 C 30.92438125610352 7.727500438690186 30.49414253234863 7.603500843048096 30.14357376098633 7.727500438690186 L 26.17580223083496 9.277501106262207 C 25.34718894958496 8.657501220703125 24.4548397064209 8.146000862121582 23.48281669616699 7.758500576019287 L 22.87729263305664 3.651000499725342 C 22.82948875427246 3.278999805450439 22.4948558807373 3 22.09648513793945 3 L 15.72255706787109 3 C 15.32418632507324 3 14.98955535888672 3.278999805450439 14.94175148010254 3.651000022888184 L 14.3362283706665 7.758500099182129 C 13.36420345306396 8.145999908447266 12.47185325622559 8.673000335693359 11.64324283599854 9.277500152587891 L 7.675471782684326 7.727499961853027 C 7.308970928192139 7.587999820709229 6.894665241241455 7.727499961853027 6.703447341918945 8.068499565124512 L 3.516482353210449 13.43150043487549 C 3.309329748153687 13.77250003814697 3.404938697814941 14.19099998474121 3.707700490951538 14.42350006103516 L 7.069948673248291 16.98099899291992 C 7.006209373474121 17.47699928283691 6.958405017852783 17.98850059509277 6.958405017852783 18.5 C 6.958405017852783 19.01149749755859 7.006209373474121 19.52299880981445 7.069948673248291 20.01899909973145 L 3.707700729370117 22.57649993896484 C 3.404938936233521 22.80900001525879 3.325264692306519 23.22749900817871 3.516482591629028 23.5684986114502 L 6.703447341918945 28.93149948120117 C 6.894665241241455 29.27249908447266 7.324905395507813 29.39649963378906 7.675471782684326 29.27249908447266 L 11.64324283599854 27.72249984741211 C 12.47185325622559 28.34249877929688 13.36420345306396 28.8539981842041 14.3362283706665 29.24149894714355 L 14.94175148010254 33.34899520874023 C 14.98955535888672 33.72099685668945 15.32418632507324 33.99999618530273 15.72255706787109 33.99999618530273 L 22.09648513793945 33.99999618530273 C 22.4948558807373 33.99999618530273 22.82948875427246 33.72099685668945 22.87729263305664 33.34899520874023 L 23.48281669616699 29.24149703979492 C 24.45484161376953 28.85399627685547 25.34718894958496 28.32699584960938 26.17580223083496 27.72249794006348 L 30.14357376098633 29.27249717712402 C 30.51007461547852 29.41199684143066 30.92438125610352 29.27249717712402 31.11559867858887 28.93149757385254 L 34.30256271362305 23.56849670410156 C 34.49378204345703 23.22749710083008 34.41410827636719 22.80899620056152 34.11134719848633 22.57649803161621 L 30.74909591674805 20.01899719238281 Z M 18.90952110290527 23.92500114440918 C 15.83409976959229 23.92500114440918 13.3323335647583 21.49150276184082 13.3323335647583 18.50000190734863 C 13.3323335647583 15.50850009918213 15.83409976959229 13.07500076293945 18.90952110290527 13.07500076293945 C 21.98494338989258 13.07500076293945 24.48670959472656 15.50850009918213 24.48670959472656 18.50000190734863 C 24.48670959472656 21.49150276184082 21.98494338989258 23.92500114440918 18.90952110290527 23.92500114440918 Z">
+				</path>
+			</svg>
+			<div id="Group_300">
+				<div id="Group_5">
+					<svg class="Icon_awesome_star" viewBox="1.441 -0.001 37.617 36.004">
+						<path fill="rgba(255,219,0,1)" id="Icon_awesome_star"
+							d="M 18.23203086853027 1.251562476158142 L 13.640625 10.56093788146973 L 3.367968797683716 12.05859375 C 1.525781273841858 12.32578086853027 0.7875001430511475 14.59687519073486 2.123437404632568 15.89765644073486 L 9.555468559265137 23.13984298706055 L 7.797656059265137 33.37031173706055 C 7.481249809265137 35.21953201293945 9.428906440734863 36.60468673706055 11.06015586853027 35.73984146118164 L 20.25 30.90937423706055 L 29.43984413146973 35.73984146118164 C 31.07109451293945 36.59765243530273 33.01874923706055 35.21952819824219 32.70234298706055 33.37031173706055 L 30.94453048706055 23.13984298706055 L 38.37656021118164 15.89765548706055 C 39.71249771118164 14.59687423706055 38.97421646118164 12.32578086853027 37.13203048706055 12.05859279632568 L 26.859375 10.56093788146973 L 22.26796913146973 1.251562476158142 C 21.4453125 -0.4078124761581421 19.06171989440918 -0.4289063215255737 18.23203277587891 1.251562476158142 Z">
+						</path>
+					</svg>
+					<svg class="Icon_awesome_star_bay" viewBox="1.441 -0.001 37.617 36.004">
+						<path fill="rgba(255,219,0,1)" id="Icon_awesome_star_bay"
+							d="M 18.23203086853027 1.251562476158142 L 13.640625 10.56093788146973 L 3.367968797683716 12.05859375 C 1.525781273841858 12.32578086853027 0.7875001430511475 14.59687519073486 2.123437404632568 15.89765644073486 L 9.555468559265137 23.13984298706055 L 7.797656059265137 33.37031173706055 C 7.481249809265137 35.21953201293945 9.428906440734863 36.60468673706055 11.06015586853027 35.73984146118164 L 20.25 30.90937423706055 L 29.43984413146973 35.73984146118164 C 31.07109451293945 36.59765243530273 33.01874923706055 35.21952819824219 32.70234298706055 33.37031173706055 L 30.94453048706055 23.13984298706055 L 38.37656021118164 15.89765548706055 C 39.71249771118164 14.59687423706055 38.97421646118164 12.32578086853027 37.13203048706055 12.05859279632568 L 26.859375 10.56093788146973 L 22.26796913146973 1.251562476158142 C 21.4453125 -0.4078124761581421 19.06171989440918 -0.4289063215255737 18.23203277587891 1.251562476158142 Z">
+						</path>
+					</svg>
+					<svg class="Icon_awesome_star_baz" viewBox="1.441 -0.001 37.617 36.004">
+						<path fill="rgba(255,219,0,1)" id="Icon_awesome_star_baz"
+							d="M 18.23203086853027 1.251562476158142 L 13.640625 10.56093788146973 L 3.367968797683716 12.05859375 C 1.525781273841858 12.32578086853027 0.7875001430511475 14.59687519073486 2.123437404632568 15.89765644073486 L 9.555468559265137 23.13984298706055 L 7.797656059265137 33.37031173706055 C 7.481249809265137 35.21953201293945 9.428906440734863 36.60468673706055 11.06015586853027 35.73984146118164 L 20.25 30.90937423706055 L 29.43984413146973 35.73984146118164 C 31.07109451293945 36.59765243530273 33.01874923706055 35.21952819824219 32.70234298706055 33.37031173706055 L 30.94453048706055 23.13984298706055 L 38.37656021118164 15.89765548706055 C 39.71249771118164 14.59687423706055 38.97421646118164 12.32578086853027 37.13203048706055 12.05859279632568 L 26.859375 10.56093788146973 L 22.26796913146973 1.251562476158142 C 21.4453125 -0.4078124761581421 19.06171989440918 -0.4289063215255737 18.23203277587891 1.251562476158142 Z">
+						</path>
+					</svg>
+					<svg class="Icon_awesome_star_ba" viewBox="1.441 -0.001 37.617 36.004">
+						<path fill="rgba(255,219,0,1)" id="Icon_awesome_star_ba"
+							d="M 18.23203086853027 1.251562476158142 L 13.640625 10.56093788146973 L 3.367968797683716 12.05859375 C 1.525781273841858 12.32578086853027 0.7875001430511475 14.59687519073486 2.123437404632568 15.89765644073486 L 9.555468559265137 23.13984298706055 L 7.797656059265137 33.37031173706055 C 7.481249809265137 35.21953201293945 9.428906440734863 36.60468673706055 11.06015586853027 35.73984146118164 L 20.25 30.90937423706055 L 29.43984413146973 35.73984146118164 C 31.07109451293945 36.59765243530273 33.01874923706055 35.21952819824219 32.70234298706055 33.37031173706055 L 30.94453048706055 23.13984298706055 L 38.37656021118164 15.89765548706055 C 39.71249771118164 14.59687423706055 38.97421646118164 12.32578086853027 37.13203048706055 12.05859279632568 L 26.859375 10.56093788146973 L 22.26796913146973 1.251562476158142 C 21.4453125 -0.4078124761581421 19.06171989440918 -0.4289063215255737 18.23203277587891 1.251562476158142 Z">
+						</path>
+					</svg>
+					<svg class="Icon_awesome_star_half_alt" viewBox="0 0 37.688 36">
+						<path fill="rgba(255,219,0,1)" id="Icon_awesome_star_half_alt"
+							d="M 35.75742340087891 12.05929660797119 L 25.46578216552734 10.56093788146973 L 20.86664009094238 1.252265572547913 C 20.45320320129395 0.4204687476158142 19.64671897888184 0 18.84023475646973 0 C 18.03867149353027 0 17.23781204223633 0.414843738079071 16.82296943664551 1.252265572547913 L 12.22242259979248 10.56023502349854 L 1.930078506469727 12.05718803405762 C 0.08437538146972656 12.32437515258789 -0.6553120613098145 14.59476661682129 0.6827347278594971 15.89554786682129 L 8.128125190734863 23.13773536682129 L 6.36609411239624 33.36679840087891 C 6.115781307220459 34.8278923034668 7.282265663146973 36 8.588671684265137 36 C 8.935312271118164 36 9.291796684265137 35.9177360534668 9.634218215942383 35.736328125 L 18.84164047241211 30.90726470947266 L 28.04835891723633 35.73773193359375 C 28.39007759094238 35.91703033447266 28.74585914611816 35.99859237670898 29.09109306335449 35.99859237670898 C 30.39890480041504 35.99859237670898 31.5674991607666 34.8306999206543 31.31718635559082 33.36890411376953 L 29.55726432800293 23.13913726806641 L 37.00406265258789 15.89835548400879 C 38.34281158447266 14.59757423400879 37.60312652587891 12.32648086547852 35.75742340087891 12.05929279327393 Z M 27.19757843017578 20.72179794311523 L 25.92351531982422 21.9607048034668 L 26.22445297241211 23.71007919311523 L 27.59695243835449 31.68703269958496 L 20.41593742370605 27.91898536682129 L 18.84234428405762 27.0935173034668 L 18.84445381164551 4.791095733642578 L 22.4325008392334 12.05367374420166 L 23.21859550476074 13.64484596252441 L 24.97711181640625 13.90078353881836 L 33.00890731811523 15.07008075714111 L 27.19757843017578 20.72179985046387 Z">
+						</path>
+					</svg>
+				</div>
+				<div id="ID4_3">
+					<span>4.3</span>
+				</div>
+			</div>
+			<div id="Honor_20_Pro">
+				<span>{{mobileName}}</span>
+			</div>
+			<div id="Capture_wonder_with_HONOR_20_P">
+				<span>Capture Wonder With HONOR 20 PRO<br />A Completely Redesigned Quad Camera<br />and Never Miss A
+					Moment
+					With Huge Battery.</span>
+			</div>
+			<svg class="Icon_ionic_md_battery_charging_ba" viewBox="10.125 2.25 39.817 75">
+				<path fill="rgba(0,0,0,1)" id="Icon_ionic_md_battery_charging_ba"
+					d="M 44.64481353759766 9.750000953674316 L 37.9968147277832 9.750000953674316 L 37.9968147277832 2.25 L 22.0700626373291 2.25 L 22.0700626373291 9.750000953674316 L 15.42206859588623 9.750000953674316 C 12.50690460205078 9.750000953674316 10.12500095367432 11.9933032989502 10.12500095367432 14.7388391494751 L 10.12500095367432 72.22768402099609 C 10.12500095367432 75.00669860839844 12.50690460205078 77.25 15.42206859588623 77.25 L 44.60926055908203 77.25 C 47.55997848510742 77.25 49.9418830871582 75.00669860839844 49.9418830871582 72.26116180419922 L 49.9418830871582 14.7388391494751 C 49.9418830871582 11.9933032989502 47.55997848510742 9.750000953674316 44.64481353759766 9.750000953674316 Z M 26.05175018310547 69.75 L 26.05175018310547 49.12500381469727 L 18.0883731842041 49.12500381469727 L 34.01513290405273 21.00000190734863 L 34.01513290405273 41.62500381469727 L 41.9785041809082 41.62500381469727 L 26.05175018310547 69.75 Z">
+				</path>
+			</svg>
+			<div id="BATTERY">
+				<span>BATTERY</span>
+			</div>
+			<div id="ID4000__mAH">
+				<span>4000 </span><br><span>mA</span><span>H</span>
+			</div>
+			<div id="RAM">
+				<span>RAM</span>
+			</div>
+			<div id="ID8_GB">
+				<span>{{Rammobile}}<br />GB</span>
+			</div>
+			<svg class="Icon_awesome_microchip_bba" viewBox="0 0 60 75">
+				<path fill="rgba(0,0,0,1)" id="Icon_awesome_microchip_bba"
+					d="M 48.75 7.03125 L 48.75 67.96874237060547 C 48.75 71.85204315185547 46.23163986206055 75 43.12500381469727 75 L 16.87500190734863 75 C 13.76836013793945 75 11.25000095367432 71.85204315185547 11.25000095367432 67.96874237060547 L 11.25000095367432 7.03125 C 11.25000095367432 3.14794921875 13.76836013793945 0 16.87500190734863 0 L 43.12500381469727 0 C 46.23163986206055 0 48.75 3.14794921875 48.75 7.03125 Z M 60 15.52734184265137 L 60 17.28515434265137 C 60 17.77056121826172 59.68520355224609 18.16406440734863 59.296875 18.16406440734863 L 57.18750381469727 18.16406440734863 L 57.18750381469727 19.04296875 C 57.18750381469727 19.52837562561035 56.87269592285156 19.92187309265137 56.484375 19.92187309265137 L 51.5625 19.92187309265137 L 51.5625 12.89062404632568 L 56.484375 12.89062404632568 C 56.87269592285156 12.89062404632568 57.18750381469727 13.28412437438965 57.18750381469727 13.76953125 L 57.18750381469727 14.64843654632568 L 59.296875 14.64843654632568 C 59.68520355224609 14.64843654632568 60 15.04193592071533 60 15.52734088897705 Z M 60 29.58984565734863 L 60 31.34765625 C 60 31.83306121826172 59.68520355224609 32.22656631469727 59.296875 32.22656631469727 L 57.18750381469727 32.22655868530273 L 57.18750381469727 33.10546493530273 C 57.18750381469727 33.59087371826172 56.87269592285156 33.98437118530273 56.484375 33.98437118530273 L 51.5625 33.98437118530273 L 51.5625 26.953125 L 56.484375 26.953125 C 56.87269592285156 26.953125 57.18750381469727 27.34662437438965 57.18750381469727 27.83202934265137 L 57.18750381469727 28.7109375 L 59.296875 28.7109375 C 59.68520355224609 28.71093940734863 60 29.10443878173828 60 29.58984565734863 Z M 60 43.65234375 L 60 45.41015625 C 60 45.89556121826172 59.68520355224609 46.2890625 59.296875 46.2890625 L 57.18750381469727 46.2890625 L 57.18750381469727 47.16796875 C 57.18750381469727 47.65336990356445 56.87269592285156 48.046875 56.484375 48.046875 L 51.5625 48.046875 L 51.5625 41.01562118530273 L 56.484375 41.01562118530273 C 56.87269592285156 41.01562118530273 57.18750381469727 41.40912628173828 57.18750381469727 41.89452743530273 L 57.18750381469727 42.77344131469727 L 59.296875 42.77344131469727 C 59.68520355224609 42.77344131469727 60 43.16693496704102 60 43.65234375 Z M 60 57.71484375 L 60 59.47265625 C 60 59.95805358886719 59.68520355224609 60.35155487060547 59.296875 60.35155487060547 L 57.18750381469727 60.35155868530273 L 57.18750381469727 61.23046875 C 57.18750381469727 61.71586608886719 56.87269592285156 62.1093635559082 56.484375 62.1093635559082 L 51.5625 62.10936737060547 L 51.5625 55.078125 L 56.484375 55.078125 C 56.87269592285156 55.078125 57.18750381469727 55.47161865234375 57.18750381469727 55.95703125 L 57.18750381469727 56.83592987060547 L 59.296875 56.83592987060547 C 59.68520355224609 56.83592987060547 60 57.22943115234375 60 57.71483993530273 Z M 3.515625238418579 55.078125 L 8.437500953674316 55.078125 L 8.437500953674316 62.10936737060547 L 3.515625238418579 62.10936737060547 C 3.127299785614014 62.1093635559082 2.812500238418579 61.71586608886719 2.812500238418579 61.23046875 L 2.812500238418579 60.35155868530273 L 0.7031250596046448 60.35155868530273 C 0.3147997856140137 60.35155487060547 0 59.95805358886719 0 59.47264862060547 L 0 57.71484375 C 0 57.22943115234375 0.3147999048233032 56.83592987060547 0.7031251192092896 56.83592987060547 L 2.812500238418579 56.83592987060547 L 2.812500238418579 55.95703125 C 2.812500238418579 55.47161865234375 3.127300024032593 55.078125 3.515625238418579 55.078125 Z M 3.515625238418579 41.01562118530273 L 8.437500953674316 41.01562118530273 L 8.437500953674316 48.046875 L 3.515625238418579 48.046875 C 3.127299785614014 48.046875 2.812500238418579 47.65336990356445 2.812500238418579 47.16796875 L 2.812500238418579 46.2890625 L 0.7031250596046448 46.2890625 C 0.3147997856140137 46.2890625 0 45.89556121826172 0 45.41015625 L 0 43.65234375 C 0 43.16693496704102 0.3147999048233032 42.77344131469727 0.7031251192092896 42.77344131469727 L 2.812500238418579 42.77344131469727 L 2.812500238418579 41.89452743530273 C 2.812500238418579 41.40912628173828 3.127300024032593 41.01562118530273 3.515625238418579 41.01562118530273 Z M 3.515625238418579 26.953125 L 8.437500953674316 26.953125 L 8.437500953674316 33.98437118530273 L 3.515625238418579 33.98437118530273 C 3.127299785614014 33.98437118530273 2.812500238418579 33.59087371826172 2.812500238418579 33.10546875 L 2.812500238418579 32.22655868530273 L 0.7031250596046448 32.22655868530273 C 0.3147997856140137 32.22656631469727 0 31.83306121826172 0 31.34765625 L 0 29.58984565734863 C 0 29.10443878173828 0.3147999048233032 28.71093940734863 0.7031251192092896 28.71093940734863 L 2.812500238418579 28.7109375 L 2.812500238418579 27.83202934265137 C 2.812500238418579 27.34662437438965 3.127300024032593 26.953125 3.515625238418579 26.953125 Z M 3.515625238418579 12.89062404632568 L 8.437500953674316 12.89062404632568 L 8.437500953674316 19.92187309265137 L 3.515625238418579 19.92187309265137 C 3.127299785614014 19.92187309265137 2.812500238418579 19.52837562561035 2.812500238418579 19.04296875 L 2.812500238418579 18.16406440734863 L 0.7031250596046448 18.16406440734863 C 0.3147997856140137 18.16406440734863 0 17.77056121826172 0 17.28515434265137 L 0 15.52734184265137 C 0 15.04193592071533 0.3147999048233032 14.64843654632568 0.7031251192092896 14.64843654632568 L 2.812500238418579 14.64843654632568 L 2.812500238418579 13.76953125 C 2.812500238418579 13.28412437438965 3.127300024032593 12.89062404632568 3.515625238418579 12.89062404632568 Z">
+				</path>
+			</svg>
+			<div id="storage">
+				<span>STORAGE</span>
+			</div>
+			<div id="ID128_GB">
+				<span>{{Storage}}<br />GB</span>
+			</div>
+			<svg class="Icon_material_sd_storage" viewBox="6 3 70 70">
+				<path fill="rgba(0,0,0,1)" id="Icon_material_sd_storage"
+					d="M 67.25000762939453 3 L 32.25 3 L 6.08750057220459 24.00000190734863 L 5.999999523162842 66.00000762939453 C 5.999999523162842 69.85002136230469 9.937498092651367 73 14.74999618530273 73 L 67.25000762939453 73 C 72.06250762939453 73 76 69.85002136230469 76 66.00000762939453 L 76 9.999998092651367 C 76 6.149998188018799 72.06250762939453 3 67.25000762939453 3 Z M 40.99999237060547 24.00000190734863 L 32.25 24.00000190734863 L 32.25 9.999998092651367 L 40.99999237060547 9.999998092651367 L 40.99999237060547 24.00000190734863 Z M 54.125 24.00000190734863 L 45.37499237060547 24.00000190734863 L 45.37499237060547 9.999998092651367 L 54.125 9.999998092651367 L 54.125 24.00000190734863 Z M 67.25000762939453 24.00000190734863 L 58.49999237060547 24.00000190734863 L 58.49999237060547 9.999998092651367 L 67.25000762939453 9.999998092651367 L 67.25000762939453 24.00000190734863 Z">
+				</path>
+			</svg>
+			<div id="CAMIRA">
+				<span>CAMERA</span>
+			</div>
+			<div id="ID42_MP">
+				<span>42<br />MP</span>
+			</div>
+			<div id="Icon_ionic_ios_camera_bbg">
+				<svg class="Path_25_bbh" viewBox="13.957 15.293 27.091 27.091">
+					<path fill="rgba(0,0,0,1)" id="Path_25_bbh"
+						d="M 41.04819488525391 28.83854866027832 C 41.04819488525391 36.3195686340332 34.98362731933594 42.38413619995117 27.50261306762695 42.38413619995117 C 20.0215950012207 42.38413619995117 13.95702743530273 36.3195686340332 13.95702743530273 28.83854866027832 C 13.95702743530273 21.35753059387207 20.0215950012207 15.29296493530273 27.50261306762695 15.29296493530273 C 34.98362731933594 15.29296493530273 41.04819488525391 21.35753059387207 41.04819488525391 28.83854866027832 Z">
+					</path>
+				</svg>
+				<svg class="Path_26_bbi" viewBox="4.5 7.875 75 60">
+					<path fill="rgba(0,0,0,1)" id="Path_26_bbi"
+						d="M 73.54297637939453 17.87499618530273 L 62.89842987060547 17.87499618530273 C 62 17.87499618530273 61.16015625 17.45833206176758 60.55467987060547 16.75000190734863 C 55.00781631469727 10.12499809265137 52.91796875 7.874999523162842 50.65234756469727 7.874999523162842 L 33.953125 7.874999523162842 C 31.66796493530273 7.874999523162842 29.4218692779541 10.12499809265137 23.85546493530273 16.77083206176758 C 23.2695255279541 17.47916603088379 22.41015243530273 17.87499618530273 21.5312442779541 17.87499618530273 L 20.7304630279541 17.87499618530273 L 20.7304630279541 16.20833206176758 C 20.7304630279541 15.29166603088379 20.0273380279541 14.54166793823242 19.16796493530273 14.54166793823242 L 14.08984279632568 14.54166793823242 C 13.23046588897705 14.54166793823242 12.52734184265137 15.29166603088379 12.52734184265137 16.20833206176758 L 12.52734184265137 17.87499618530273 L 11.06249809265137 17.87499618530273 C 7.605466842651367 17.87499618530273 4.499998569488525 20.625 4.499998569488525 24.27083206176758 L 4.499998569488525 60.9375 C 4.499998569488525 64.58332824707031 7.605466842651367 67.875 11.04296875 67.875 L 73.54297637939453 67.875 C 76.98046875 67.875 79.5 64.58332824707031 79.5 60.9375 L 79.5 24.27083206176758 C 79.5 20.625 76.98046875 17.87499618530273 73.54297637939453 17.87499618530273 Z M 42.78124618530273 59.625 C 32.95702743530273 60.10416412353516 24.87108993530273 51.47916793823242 25.32030868530273 41 C 25.71093559265137 31.85416603088379 32.64453125 24.45833206176758 41.21875 24.04166221618652 C 51.04296875 23.56249809265137 59.12890243530273 32.1875 58.6796875 42.66667175292969 C 58.2890625 51.81250381469727 51.35547256469727 59.20833587646484 42.78124618530273 59.625 Z M 60.75 29.95833206176758 C 59.34374237060547 29.95833206176758 58.2109375 28.74999809265137 58.2109375 27.24999618530273 C 58.2109375 25.74999618530273 59.34374237060547 24.54166603088379 60.75 24.54166603088379 C 62.15624618530273 24.54166603088379 63.28905868530273 25.74999618530273 63.28905868530273 27.24999618530273 C 63.28905868530273 28.74999809265137 62.15624618530273 29.95833206176758 60.75 29.95833206176758 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="Group_301">
+				<div id="color__">
+					<span>Color :</span>
+				</div>
+				<svg class="Ellipse_4">
+					<ellipse fill="rgba(205,30,246,1)" id="Ellipse_4" rx="17.5" ry="17.5" cx="17.5" cy="17.5">
+					</ellipse>
+				</svg>
+				<svg class="Ellipse_5">
+					<ellipse fill="rgba(99,18,170,1)" id="Ellipse_5" rx="17.5" ry="17.5" cx="17.5" cy="17.5">
+					</ellipse>
+				</svg>
+				<svg class="Ellipse_6">
+					<ellipse fill="rgba(77,19,134,1)" id="Ellipse_6" rx="17.5" ry="17.5" cx="17.5" cy="17.5">
+					</ellipse>
+				</svg>
+			</div>
+		</script>
+
+
+			<script>
+				$(document).ready(function () {
+					var mobileId = localStorage.getItem('mobileId');
+					var url = 'http://127.0.0.1:5000/product/' + (mobileId != null ? mobileId : 1);
+					$.getJSON(url, function (jsondata) {
+
+
+						var data = {
+							mobileName: jsondata.mobile,
+							Rammobile: jsondata.ram,
+							Storage: jsondata.storage_size
+
+
+						}
+						var template = $("#tutorial-template").html();
+
+						var html = Mustache.render(template, data);
+						$("body").append(html);
+
+					});
+				});
+			</script>
+		</form>
+		<div id="footer" class="footer">
+			<div id="footer1">
+				<svg class="Icon_awesome_cheese" viewBox="-0.963 -1.787 1370.001 358.444">
+					<path fill="rgba(0,85,151,1)" id="Icon_awesome_cheese"
+						d="M 800.8997802734375 3.302837610244751 C 780.4789428710938 3.093331098556519 155.91357421875 -4.473278999328613 139.962646484375 -0.7652935981750488 L 86.337646484375 15.32470703125 L 36.11105346679688 38.139404296875 L -0.9630126953125 80.917236328125 L -0.9630126953125 129.398681640625 L -0.9630126953125 356.6578369140625 L 1369.038452148438 356.6578369140625 L 1367.925537109375 179.265625 C 1367.925537109375 86.39472961425781 1116.173583984375 8.105574607849121 800.8997802734375 3.302837610244751 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="sitemap">
+				<span>SITEMAP</span>
+			</div>
+			<div id="product">
+				<span>PRODUCT</span>
+			</div>
+			<div id="hELP">
+				<span>HELP</span>
+			</div>
+			<div id="subscribe">
+				<span>SUBSCRIBE</span>
+			</div>
+			<div id="Group_51">
+				<div id="Group_53">
+					<svg class="Rectangle_32">
+						<rect fill="rgba(255,255,255,0.239)" stroke="rgba(112,112,112,1)" stroke-width="1px"
+							stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto"
+							id="Rectangle_32" rx="10" ry="10" x="0" y="0" width="260" height="60">
+						</rect>
+					</svg>
+					<div id="Group_52">
+						<div id="Enter_your_mail___">
+							<span>Enter your mail...</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="About_us">
+				<span><a href="about_us_.html" style="color: #D1CCCC; text-decoration: none;">About Us</a></span>
+			</div>
+			<div id="Services">
+				<span><a href="home.html" style="color: #D1CCCC; text-decoration: none;">Services</a></span>
+			</div>
+			<div id="blog_x">
+				<span><a href="blog.html" style="color: #D1CCCC; text-decoration: none;">Blog</a></span>
+			</div>
+			<div id="contact_us">
+				<span><a href="#" style="color: #D1CCCC; text-decoration: none;">Contact Us</a></span>
+			</div>
+			<div id="newest">
+				<span><a href="home.html" style="color: #D1CCCC; text-decoration: none;">Newest</a></span>
+			</div>
+			<div id="features">
+				<span><a href="#" style="color: #D1CCCC; text-decoration: none;">Features</a></span>
+			</div>
+			<div id="customers">
+				<span><a href="#" style="color: #D1CCCC; text-decoration: none;">Customers</a></span>
+			</div>
+			<div id="feedback">
+				<span><a href="#" style="color: #D1CCCC; text-decoration: none;">Feedback</a></span>
+			</div>
+			<div id="getting_started">
+				<span><a href="personal.html" style="color: #D1CCCC; text-decoration: none;">Getting
+						Started</a></span>
+			</div>
+			<div id="FAQ">
+				<span><a href="#" style="color: #D1CCCC; text-decoration: none;">FAQ</a></span>
+			</div>
+			<div id="How_it_work">
+				<span><a href="#" style="color: #D1CCCC; text-decoration: none;">How It Work</a></span>
+			</div>
+			<div id="Group_648">
+				<svg class="Rectangle_60_">
+					<rect fill="rgba(245,239,54,1)" id="Rectangle_60_" rx="10" ry="10" x="0" y="0" width="130"
+						height="60">
+					</rect>
+				</svg>
+				<div id="send">
+					<span>Send</span>
+				</div>
+			</div>
+			<img id="icons8_twitter_circled_48" src="../static/images/icons8_twitter_circled_48.png"
+				srcset="../static/images/icons8_twitter_circled_48.png 1x, ../static/images/icons8_twitter_circled_48@2x.png 2x">
+			<img id="icons8_facebook_48" src="../static/images/icons8_facebook_48.png"
+				srcset="../static/images/icons8_facebook_48.png 1x, ../static/images/icons8_facebook_48@2x.png 2x">
+			<img id="icons8_linkedin_circled_48" src="../static/images/icons8_linkedin_circled_48.png"
+				srcset="../static/images/icons8_linkedin_circled_48.png 1x, ../static/images/icons8_linkedin_circled_48@2x.png 2x">
+		</div>
+		<div class="wrapper">
+			<div class="searchbox">
+				<input type="text" class="input">
+
+				<div class="searchbtn">
+					<i class="fas fa-search"></i>
+				</div>
+
+			</div>
+		</div>
+</body>
+
+</html>
