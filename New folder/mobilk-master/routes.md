@@ -1,0 +1,10 @@
+Map([<Rule '/top10Battery' (GET, HEAD, OPTIONS) -> top10Battery>,
+ <Rule '/top10Camera' (GET, HEAD, OPTIONS) -> top10Camera>,
+ <Rule '/top10Screen' (GET, HEAD, OPTIONS) -> top10Screen>,
+ <Rule '/top10cpu' (GET, HEAD, OPTIONS) -> top10cpu>,
+ <Rule '/product' (POST, OPTIONS) -> add_product>,
+ <Rule '/product' (GET, HEAD, OPTIONS) -> get_products>,
+ <Rule '/product/<id>' (GET, HEAD, OPTIONS) -> get_product>,
+ <Rule '/product/<mobile_id>' (OPTIONS, PUT) -> update_product>,
+ <Rule '/product/<mobile_id>' (OPTIONS, DELETE) -> delete_product>,
+ <Rule '/static/<filename>' (GET, HEAD, OPTIONS) -> static>])
