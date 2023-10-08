@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levels</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <script id="levels" type="type=" text/template"> <div class="input-group mb-3">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">{{interestName}}</label>
+            </div>
+            <select class="custom-select select-input" id="inputGroupSelect01" index={{index}}>
+              <option selected>Choose...</option>
+              <option value="1">High</option>
+              <option value="2">Medium</option>
+              <option value="3">Low</option>
+            </select>
+          </div>
+    </script>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div id="render-area" class="col-12" style="margin:auto;">
+            </div>
+            <button id="action-btn" page="1" class="btn btn-info">next</button>
+        </div>
+
+    </div>
+
+
+    <script type="module" src="js/levels.js"></script>
+</body>
+
+</html>

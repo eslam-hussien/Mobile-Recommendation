@@ -1,0 +1,65 @@
+#Mobill Algorithm
+User Input >>>>>> Budget , Answer for prefrence questions
+For Budget >> there are two  options first to let it empty OR second to choose one of the prices from the dropdown list 
+For the prefrence questions >> the user will see 13 checkboxs he will check whatever he want then in the next page he will choose what is the group of each 
+chocie then in the next page he will choose the priority of each component in each group 
+Example 
+Budget>> 5000
+user checked >> photography , media , storage and phone calls >>> those options will be showen in the next page then >>>
+HE will choose in each group what to add in >> We have 3 Groups Important , mediam and low >. 
+user will choose important for media and sorage , And he will choose mediam for  photography , And he will choose low for phone calls.
+In the next page >> He will choose the priority in each group example in important group>> for media he will put 1 , for storage he will put 2 ..etc
+Then the output will be as the following 
+IF Budget = True "Have a value "{
+HE will see three sections in the result page
+1-Best mobile for your prefrences within the budget
+	This option is optained by the following steps 
+	1-filter the data according to the price"Budget" Enterd from the user
+	2-Normalize the data with the following equation y=x-mix/max-min(new_max-new_min)+new_min  where y is the result x is the value we want to normalize 
+	max is the hightest value in the current column , min is the lowest value in the same column , new_max=1 , new_min=0.
+	Example : if the user choosed media and media refers in the mapping to cpu , screen and ram 
+	the system will retreive those 3 columns from the database we already filterd with the input price and make normalization to those 3 columns with the equation
+	mentioned above.
+	3-Calculate each group weight Like what you did before ( 5, 3 ,1 ) then depends on what user will input the weights will be distributed 
+	4-From the mapping we will get common components from the user choices we will sum the result for each compnent
+	5-then we will get like storage=0.8 , screen=7.5 , cpu= 0.3 
+	6-we will multiply each weight in the normalized data 
+	example for storage column for 0.8*normalized value 
+	7- sum all scores for each record (raw) and we will get a new column called totalscore
+	8-Arrange this table descinding then show top 10 mobiles for the user
+2- price/total scores the n arrange descesnding (Best value for money )
+	Starting from step 8 Arrange this table descinding then show top 10 mobiles for the user **
+	1- We will make normalization again y=x-mix/max-min(new_max-new_min)+new_min But this time new_max will be 10 and new_min will be 1
+	2- calculate price/total score After NORmalization 
+	3-Arrange the table again descinding then show top 10 mobiles 
+3-clusters within the budget 
+	Assume we have 4 clusters price Ranges from 0-3000 , 3200-7000 , 7150-11000, 11500-22000
+	Assume that the user choosed the budget 5000
+	We will make the same previous steps in 1st output But we will make those steps 1st in the cluster from 3200-7000 , then in the cluster 0-3000 
+	At the end we will show in this section 6 mobiles 3 from the 1st cluster Range (Within user budget) ,and second we will show 3 mobiles from second cluster Lower one 
+	 
+}
+Else "Budget=False (Empty)"{
+1-Best mobile
+	Like Best mobile for your prefrences within the budget But wih NO BUDGET LIMIT OR FILTER
+2-best value for the money without budget limit
+	Like price/total scores then arrange descesnding (Best value for money) BUT NO BUDGET LIMIT or filter
+3-best mobile within each cluster 
+	Like clusters within the budget 
+	But we will make the algorithm run and get results from all the clusters we have 
+	REsult will be As the following 
+	In cluster 0-3000 we recommend (Mobil Name + price )
+	In cluster 3200-7000 we recommend (Mobil Name + price )
+	In cluster 7150-11000 we recommend (Mobil Name + price )
+	In cluster 11500-22000  we recommend (Mobil Name + price )
+
+
+
+
+
+
+
+
+
+
+}

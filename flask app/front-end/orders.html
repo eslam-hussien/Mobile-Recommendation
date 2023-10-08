@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <script id="orders" type="type=" text/template"> <div class="input-group mb-3">
+        <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="number" index="{{index}}" class="order-inputs" 
+                        aria-label="Checkbox for following text input">
+                </div>
+            </div>
+            <span class="ml-2">{{interestName}}</span>
+        </div>
+    </script>
+
+    <div class="input-group-text">
+        <h4>Specify your budget: </h4>
+        <input type="number" id="budget" class="order-inputs" aria-label="Checkbox for following text input">
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div id="render-area" class="col-12" style="margin:auto;">
+            </div>
+            <button id="action-btn" page="1" class="btn btn-info">submit</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/orders.js"></script>
+
+</html>

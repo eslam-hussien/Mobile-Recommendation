@@ -1,0 +1,70 @@
+{
+    "product": {
+        "type": "object",
+        "properties": {
+            "ram": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 16
+            },
+            "storage_size": {
+                "type": "number",
+                "minimum": 2,
+                "maximum": 128
+            },
+            "cpu_id": {
+                "type": "number",
+                "minimum": 1
+            },
+            "ppi": {
+                "type": "number"
+            },
+            "price_egp": {
+                "type": "number",
+                "minimum": 500
+            },
+            "selfie": {
+                "type": "number"
+            },
+            "main_camera": {
+                "type": "number"
+            },
+            "battery_endurance_time": {
+                "type": "number"
+            },
+            "display_protection": {
+                "enum": [
+                    0,
+                    1
+                ]
+            },
+            "mobile": {
+                "type": "string"
+            },
+            "make": {
+                "type": "number"
+            },
+            "thickness": {
+                "type": "number"
+            },
+            "edge": {
+                "type": "number"
+            }
+        },
+        "required": [
+            "ram",
+            "storage_size",
+            "price_egp",
+            "ppi",
+            "cpu_id",
+            "selfie",
+            "main_camera",
+            "battery_endurance_time",
+            "display_protection",
+            "mobile",
+            "make",
+            "thickness",
+            "edge"
+        ]
+    }
+}
